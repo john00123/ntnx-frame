@@ -6,7 +6,7 @@ const nutanixLogo = `
   </svg>`
 
 
-const fullpage = `<div class='header'><div class='left'><h3> Instance Name &nbsp; <span data-type='alt'>102.168.90.1</span></h3> </div>
+const fullpage = `<div class='header'><div class='left'><h3> Instance Name &nbsp; <span data-type='alt' style='font-weight:400'>102.168.90.1</span></h3> </div>
   <div class='select-container'>
 
     <select>
