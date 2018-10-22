@@ -1,13 +1,13 @@
 
 const popupData ={
   title :[
-    'Full VM view'
+    'Atomatically hide/show'
   ],
 
   body: [
     //0 add instance
-    `<img style='height:120px; margin-bottom:30px;' src='../img/no-header.svg'/>
-        <p>This will maximize the space available to render the Virtual Machine<br><br>To return to the regular view you can do so by pressing <code class='code-blue'>ESC</code> on your keyboard.</p>
+    `<img style='height:120px; margin-bottom:30px;' src='../img/no-header3.svg'/>
+        <p>This will maximize the space available to render the Virtual Machine. Press<code class='code-blue'>ESC</code> to return to the regular view.</p>
         <br><br>
         <p class='fw'><input type='checkbox'> Don't show me this again </p>
 
