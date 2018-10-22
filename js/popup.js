@@ -1,14 +1,14 @@
 
 const popupData ={
   title :[
-    'Hide VM info'
+    'Full VM view'
   ],
 
   body: [
     //0 add instance
-    `
-        <p> This will hide the any information from the screen, press 'ESC' to toggle this view.</p>
-        <br>
+    `<img style='height:120px; margin-bottom:30px;' src='../img/no-header.svg'/>
+        <p>This will maximize the space available to render the Virtual Machine<br><br>To return to the regular view you can do so by pressing <code class='code-blue'>ESC</code> on your keyboard.</p>
+        <br><br>
         <p class='fw'><input type='checkbox'> Don't show me this again </p>
 
     `
@@ -17,9 +17,14 @@ const popupData ={
   footer:[
     //0
     `
-    <button class="primary save" onclick="removePopup()" style='width:auto; margin-left:10px'>Done</button>
+    <button class="primary save" onclick="removePopup(), toggleHeader() " style='width:auto; margin-left:10px'>Done</button>
     `,
   ]
+}
+
+function toggleHeader(){
+  $('body').toggleClass('no-header');
+  $('header').toggle();
 }
 
 function removePopup(){
@@ -49,8 +54,5 @@ document.onkeydown = function(evt) {
     }
     if (isEscape) {
         CreatePopup(0,0,0);
-        $('header').toggle();
-        $('body').toggleClass('no-header');
-
     }
 };

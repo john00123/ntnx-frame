@@ -571,7 +571,7 @@ container .iconContainer h3 {
 .popup-body p {
   line-height: 1.5;
   margin-bottom: -6px;
-  color: #627386;
+  color: #22272E;
 }
 
 .popup-body .separator {
@@ -703,6 +703,13 @@ container .iconContainer h3 {
   border-radius: 4px 0 0 4px;
 }
 
+.code-blue {
+  padding: 2px 5px;
+  background-color: #e9f6fe;
+  color: #1f88de;
+  border-radius: 3px;
+}
+
 .popup-footer {
   display: flex;
   align-items: center;
@@ -781,7 +788,7 @@ container .iconContainer h3 {
 }
 
 .no-header {
-  margin-top: 0 !important;
+  margin: 0 !important;
 }
 
 .status {

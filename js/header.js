@@ -13,7 +13,7 @@ const fullpage = `<div class='header'><div class='left'><h3> Instance Name &nbsp
       <option selected hidden disabled> Actions</option>
       <option> Restart VM </option>
     </select>
-    <p class='status'> Active </p>
+    <p class='status'> Running </p>
   </div>
 </div>`
 
