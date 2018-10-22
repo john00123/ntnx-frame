@@ -2,15 +2,18 @@
 @import '../../_ntnx/variables';
 @import '../../_ntnx/mixins';
 
-html { @include font }
+html { @include font
+  @include flex(center, center, column);
+}
 button{user-select: none;}
 body {
   margin: 60px 0;
-  background: url('../img/10-14-Day-Thumb.jpg');
+  // background: url('../img/10-14-Day-Thumb.jpg');
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  @include size(100vh, 100vw);
+  min-height: 100vh;
   overflow: hidden;
+  background-color: $background-color-1;
 }
 
 //fonts
@@ -48,21 +51,23 @@ header {
   left:    0;
   z-index: 20;
   background-color: rgba(0,0,0,0.2);
-
-
+  @include transition(height);
 }
+
 .header{
   @include size(60px, 100%);
   @include flex(center,space-between, row);
+  @include transition(all);
   svg{
-    height: 20px;
+    @include transition(all);
+    height: 18px;
     fill:$background-color-2;
     opacity: 0.8;
     margin-right: 20px;
   }
 
   margin: auto;
-  max-width: 980px;
+
 
   .left{
     @include flex(center,flex-start, row);
@@ -74,6 +79,34 @@ header {
   .user{
     height: 20px;
   }
+}
+
+
+
+.header span{
+  cursor: pointer;
+  @include transition(all);
+  &:hover{
+    padding: 2px 5px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 3px;
+    color:white;
+  }
+  &::after{
+    content:'Copy';
+    opacity: 0;
+    @include transition(all);
+    margin-left: 0;
+    border-radius: 3px;
+    color:$font-color-3;
+
+  }
+  &:hover::after{
+    opacity: 1;
+    margin-left: 10px;
+    transform: translateX(110px);
+  }
+
 }
 
 .screens{
@@ -92,14 +125,35 @@ header {
 
 .screenblock{
   padding: 10px;
-  
 }
 
+
+.screen{
+  @include flex(center, center, column);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.vm{
+  min-height: 600px;
+  width: 800px;
+  background: url('../img/10-14-Day-Thumb.jpg');
+  background-size: cover;
+}
+
+.appleheader{
+  @include size(25px, 100%);
+  background-color: rgba(0,0,0,0.4);
+  color:white;
+  padding: 6px 20px;
+}
 
 container{
   @include grid(130px,1fr,20px);
   padding: 30px;
   max-width: 980px;
+
+
   margin: auto;
 
   .iconContainer{
@@ -146,4 +200,247 @@ container{
   overflow: auto;
   border-radius: 3px;
   height: 30px!important;
+}
+
+
+@media screen and (max-height: 700px) {
+  header{
+    height: 40px;
+  }
+
+  body{
+    margin: 40px}
+  .header{
+
+    height: 40px;
+    svg{
+      height: 14px;
+      fill:$background-color-2;
+      opacity: 0;
+      margin-right: 20px;
+      transform: translateX(-20px);
+      margin-right: -20px;
+    }
+  }
+}
+
+
+
+/*Popup
+========================================================================== */
+.overlay{
+  @include size(100%, 100%);
+  @include flex(center, center, column);
+  @include absolute();
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color: rgba(0,0,0,0.4);
+  overflow: hidden;
+  @include transition(all);
+}
+
+.popup{
+  @include size(auto,400px);
+  @include shadow;
+}
+
+.popup-header{
+  @include flex(center, center ,row);
+  @include size(auto, 100%);
+  position:relative;
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid $border-color-3;
+  line-height: 10px;
+
+  &:hover::before, &:hover::after{
+    background-color:$font-color-1;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &::before, &::after{
+  content:'';
+  @include absolute(18px,'',23px);
+  @include size(14px, 2px);
+  border-radius: 3px;
+  display: block;
+  background-color: $font-color-3;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+  }
+  &::after{
+    transform: rotate(-45deg);
+  }
+}
+
+.popup-body{
+  @include size(auto,100%);
+  @include flex(center, flex-start, column);
+  @include inputStyle;
+  padding: 30px 20px;
+  background-color: white;
+  text-align: left;
+  h1{
+    font: $h3;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    margin-top: -8px;
+    width: 100%;
+  }
+
+  h3{
+    font: $h3;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-top: -8px;
+    width: 100%;
+    code{
+      background-color: $light-blue-3;
+      color:$dark-blue-3;
+      padding: 0 5px;
+      border-radius: 2px;
+    }
+  }
+
+  p{
+    line-height: 1.5;
+    margin-bottom: -6px;
+    color: $font-color-1;
+  }
+
+
+  .separator{
+    @include size(1px, 100%);
+    background-color: $border-color-3;
+    margin: 30px 0;
+  }
+
+  .primary{
+    @include size(32px, 100%);
+    @include primary;
+    margin-top: 20px;
+  }
+
+  .secondary{
+    @include size(32px, 100%);
+    @include secondary;
+    margin-top: 20px;
+  }
+
+  input.confirm-deletion{
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .delete{
+    border-radius: 4px;
+    border: none;
+    margin-top: 20px;
+    background-color: $red-1;
+    &:hover{
+      background-color: $dark-red-3;
+    }
+  }
+  input[type="file"]{
+    display: none;
+  }
+
+  .upload-file{
+    width: 100%;
+
+    @include flex(center, space-between, row);
+    .file-button{
+
+      @include secondary;
+      @include size(32px, 121px);
+      border-radius: 0 4px 4px 0;
+      border-left:none;
+      border-color: $border-color-1;
+    }
+
+    input.path{
+      margin: 0;
+      display: flex;
+      flex-grow: 1;
+      border-radius: 4px 0 0 4px;
+    }
+  }
+}
+
+.code-blue{
+  padding: 2px 5px;
+  background-color: $light-blue-3;
+  color:$dark-blue-3;
+  border-radius: 3px;
+}
+.popup-footer{
+  @include flex(center,flex-end,row);
+  @include size(72px, 100%);
+  border-radius:
+  0   0
+  4px 4px;
+  border-top: 1px solid $border-color-3;
+  background-color: white;
+  padding: 20px;
+
+  .primary{
+    @include primary;
+    border: 1px solid transparent;
+    height: 32px;
+    margin-left: 10px;
+  }
+
+  .secondary{
+    @include secondary;
+    height: 32px;
+    box-sizing: border-box;
+
+  }
+}
+
+
+.select-container{
+  @include flex(center, flex-end, row);
+}
+
+.no-header{
+  margin: 0!important;
+}
+
+.status{
+  @include flex(center, stretch, row);
+  color:$font-color-3;
+  margin-left: 20px;
+  &::before{
+    display: inline-block;
+    content: '';
+    @include size(6px, 6px);
+    background-color: $green-1;
+    border-radius: 4pc;
+    margin-right: 5px;
+  }
+}
+
+
+select{
+  direction: rtl;
+  background: none;
+  appearance:none;
+  border: none;
+  font:$p;
+  color:white;
+  -webkit-appearance: none;
+  outline:none;
+  font-weight: 500;
+
 }
