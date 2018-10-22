@@ -1,0 +1,282 @@
+html {
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  user-select: none;
+}
+
+body {
+  margin: 60px 0;
+  background: url("../img/10-14-Day-Thumb.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+h1 {
+  font: 200 29px/20px "nutanix_soft", san-serif;
+}
+
+h2 {
+  font: 400 18px/12px "nutanix_soft", san-serif;
+}
+
+h3 {
+  font: 500 14px/10px "nutanix_soft", san-serif;
+}
+
+h4 {
+  font: 400 12px/8px "nutanix_soft", san-serif;
+}
+
+p {
+  font: 400 14px/22px "nutanix_soft", san-serif;
+}
+
+a {
+  color: #22A5F7;
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+.primary {
+  margin: 0;
+  border-radius: 4px;
+  padding: 11px 15px;
+  color: #FFFFFF;
+  font: 500 14px/10px "nutanix_soft", san-serif;
+  border: none;
+  text-decoration: none;
+  background-color: #22A5F7;
+  outline: none;
+}
+
+.primary:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+  background-color: #1f88de;
+}
+
+.primary:active {
+  color: #FFFFFF;
+  background-color: #1b6dc6;
+}
+
+.primary span {
+  height: 10px;
+  display: block;
+  font-weight: 500;
+  line-height: 9pt;
+}
+
+.secondary-alt {
+  background-color: #FFFFFF;
+  border: 1px solid #D5DAE0;
+  border-radius: 4px;
+  padding: 11px 15px;
+  font: 500 14px/10px "nutanix_soft", san-serif;
+  color: #22272E;
+  text-decoration: none;
+  margin: 0;
+  outline: none;
+  transition: box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: none;
+}
+
+.secondary-alt:hover {
+  color: #22A5F7;
+  cursor: pointer;
+}
+
+.secondary-alt:active {
+  color: #91d2fb;
+}
+
+.secondary-alt:hover {
+  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.secondary {
+  background-color: #FFFFFF;
+  border: 1px solid #D5DAE0;
+  border-radius: 4px;
+  padding: 11px 15px;
+  font: 500 14px/10px "nutanix_soft", san-serif;
+  color: #22272E;
+  text-decoration: none;
+  margin: 0;
+  outline: none;
+}
+
+.secondary:hover {
+  color: #22A5F7;
+  cursor: pointer;
+}
+
+.secondary:active {
+  color: #91d2fb;
+}
+
+.fw {
+  width: 100%;
+}
+
+[data-type='alt'] {
+  color: #7C8D9F;
+}
+
+header, aside, footer {
+  position: fixed;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto;
+  max-width: 980px;
+}
+
+.header svg {
+  height: 20px;
+  fill: #37414B;
+  opacity: 0.8;
+  margin-right: 20px;
+}
+
+.header .left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.header .user {
+  height: 20px;
+}
+
+.screens {
+  height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.screens img {
+  height: 100px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.screens h3 {
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+}
+
+.screenblock {
+  padding: 10px;
+}
+
+container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 20px;
+  padding: 30px;
+  max-width: 980px;
+  margin: auto;
+}
+
+container .iconContainer {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 4px;
+  height: 64px;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+container .iconContainer > * {
+  user-select: none;
+}
+
+container .iconContainer > *::selection {
+  background: transparent;
+}
+
+container .iconContainer:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+container .iconContainer:active {
+  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+container .iconContainer img {
+  height: 64px;
+}
+
+container .iconContainer h3 {
+  user-select: none;
+  padding: 0px 16px;
+  margin-top: 10px;
+  border-radius: 4pc;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.user {
+  background-image: url("../img/pyramid.png");
+  background-size: cover;
+  border: none;
+  height: 30px;
+  width: 30px;
+  box-sizing: border-box;
+  overflow: auto;
+  border-radius: 3px;
+  height: 30px !important;
+}

@@ -1,0 +1,149 @@
+//Comment for compiler
+@import '../../_ntnx/variables';
+@import '../../_ntnx/mixins';
+
+html { @include font }
+button{user-select: none;}
+body {
+  margin: 60px 0;
+  background: url('../img/10-14-Day-Thumb.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+//fonts
+
+h1 { font: $h1 }
+h2 { font: $h2 }
+h3 { font: $h3 }
+h4 { font: $h4 }
+p  { font: $p  }
+a  { @include link }
+h1 { line-height: 1.2 }
+
+//primitives
+
+.primary       { @include primary }
+.secondary-alt { @include secondary-alt }
+.secondary     { @include secondary }
+
+// color and size
+
+.fw   { width: 100% }
+[data-type='alt']{ color:$font-color-3 }
+
+
+header, aside, footer{
+  position: fixed;
+}
+
+//full page popup header
+
+header {
+  @include size(60px, 100%);
+  padding: 0 20px;
+  top:     0;
+  left:    0;
+  z-index: 20;
+  background-color: rgba(0,0,0,0.2);
+
+
+}
+.header{
+  @include size(60px, 100%);
+  @include flex(center,space-between, row);
+  svg{
+    height: 20px;
+    fill:$background-color-2;
+    opacity: 0.8;
+    margin-right: 20px;
+  }
+
+  margin: auto;
+  max-width: 980px;
+
+  .left{
+    @include flex(center,flex-start, row);
+    color: $white;
+    font-weight: 600;
+
+  }
+
+  .user{
+    height: 20px;
+  }
+}
+
+.screens{
+  @include size( 150px, 100%);
+  @include flex (center, center, row);
+  background-color: rgba(0,0,0,0.4);
+  img{
+    @include size (100px, auto);
+  }
+  h3{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+  }
+}
+
+.screenblock{
+  padding: 10px;
+  
+}
+
+
+container{
+  @include grid(130px,1fr,20px);
+  padding: 30px;
+  max-width: 980px;
+  margin: auto;
+
+  .iconContainer{
+    > * {
+      user-select: none;
+      &::selection { background: transparent; }
+    }
+    user-select: none;
+    @include flex(center, center, column);
+    background-color: rgba(0,0,0,0.2);
+    padding: 30px;
+    border-radius: 4px;
+    height: 64px;
+    @include transition(all);
+    &:hover{
+      transform: scale(1.04);
+      cursor: pointer;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    &:active{
+      transform: scale(1.0);
+      background-color: rgba(0,0,0,0.5);
+    }
+    img {height:64px;}
+    h3{
+      user-select: none;
+      padding: 0px 16px;
+      margin-top: 10px;
+      border-radius: 4pc;
+      color:white;
+      width: 100%;
+      text-align: center;
+
+    }
+  }
+}
+
+.user{
+  background-image: url('../img/pyramid.png');
+  background-size: cover;
+  border: none;
+  @include size(30px, 30px);
+  overflow: auto;
+  border-radius: 3px;
+  height: 30px!important;
+}
