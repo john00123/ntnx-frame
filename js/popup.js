@@ -1,22 +1,23 @@
 
 const popupData ={
   title :[
-    'Almost Done'
+    'Hide VM info'
   ],
 
   body: [
     //0 add instance
     `
-        <img src='../img/license.svg' style='height:100px'/><br>
-        <p> Download the license file below and upload it on to Prism Element of the cluster to complete this process. </p>
+        <p> This will hide the any information from the screen, press 'ESC' to toggle this view.</p>
+        <br>
+        <p class='fw'><input type='checkbox'> Don't show me this again </p>
 
     `
   ],
 
   footer:[
     //0
-    `<button class="secondary save" onclick="removePopup()"" style='width:auto'>Close</button>
-    <button class="primary save" onclick="removePopup()" style='width:auto; margin-left:10px'>Download Again</button>
+    `
+    <button class="primary save" onclick="removePopup()" style='width:auto; margin-left:10px'>Done</button>
     `,
   ]
 }
@@ -37,3 +38,17 @@ function CreatePopup(i,j,k){
   </div>
   `);
 }
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key == "Escape" || evt.key == "Esc");
+    } else {
+        isEscape = (evt.keyCode == 27);
+    }
+    if (isEscape) {
+        CreatePopup(0,0,0);
+        $('header').toggle();
+    }
+};

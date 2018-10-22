@@ -6,17 +6,14 @@ const nutanixLogo = `
   </svg>`
 
 
-const fullpage = `<div class='header'><div class='left'><h3> Instance Name</h3> </div><button class='user'></button></div>`
+const fullpage = `<div class='header'><div class='left'><h3> Instance Name &nbsp; <span data-type='alt'>102.168.90.1</span></h3> </div><select>
+  <option selected hidden disabled> Actions </option>
+  <option> Restart VM </option>
+</select></div>`
 
-const screens = `<div class='screens'>
-  <div class='screenblock'>
-  <img src='../img/10-13--thumb.jpg'>
-  <h3> screen name </h3>
-  </div>
-</div>`
 
 
 //initial setup
-$('header').before(screens);
+
 $('header').append(fullpage);
 $('.left').prepend(nutanixLogo);
