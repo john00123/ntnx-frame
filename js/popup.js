@@ -50,5 +50,7 @@ document.onkeydown = function(evt) {
     if (isEscape) {
         CreatePopup(0,0,0);
         $('header').toggle();
+        $('body').toggleClass('no-header');
+
     }
 };

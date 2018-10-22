@@ -405,6 +405,10 @@ container{
   @include flex(center, flex-end, row);
 }
 
+.no-header{
+  margin-top: 0!important;
+}
+
 .status{
   @include flex(center, stretch, row);
   color:$font-color-3;
