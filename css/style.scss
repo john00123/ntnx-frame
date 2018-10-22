@@ -204,14 +204,14 @@ container{
 
 @media screen and (max-height: 700px) {
   header{
-    height: 30px;
+    height: 40px;
   }
 
   body{
-    margin: 30px}
+    margin: 40px}
   .header{
 
-    height: 30px;
+    height: 40px;
     svg{
       height: 14px;
       display: none;
@@ -398,5 +398,37 @@ container{
     box-sizing: border-box;
 
   }
+}
+
+
+.select-container{
+  @include flex(center, flex-end, row);
+}
+
+.status{
+  @include flex(center, stretch, row);
+  color:$font-color-3;
+  margin-left: 20px;
+  &::before{
+    display: inline-block;
+    content: '';
+    @include size(6px, 6px);
+    background-color: $green-1;
+    border-radius: 4pc;
+    margin-right: 5px;
+  }
+}
+
+
+select{
+  direction: rtl;
+  background: none;
+  appearance:none;
+  border: none;
+  font:$p;
+  color:white;
+  -webkit-appearance: none;
+  outline:none;
+  font-weight: 500;
 
 }

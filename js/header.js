@@ -6,10 +6,16 @@ const nutanixLogo = `
   </svg>`
 
 
-const fullpage = `<div class='header'><div class='left'><h3> Instance Name &nbsp; <span data-type='alt'>102.168.90.1</span></h3> </div><select>
-  <option selected hidden disabled> Actions </option>
-  <option> Restart VM </option>
-</select></div>`
+const fullpage = `<div class='header'><div class='left'><h3> Instance Name &nbsp; <span data-type='alt'>102.168.90.1</span></h3> </div>
+  <div class='select-container'>
+
+    <select>
+      <option selected hidden disabled> Actions</option>
+      <option> Restart VM </option>
+    </select>
+    <p class='status'> Active </p>
+  </div>
+</div>`
 
 
 

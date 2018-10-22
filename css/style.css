@@ -342,13 +342,13 @@ container .iconContainer h3 {
 
 @media screen and (max-height: 700px) {
   header {
-    height: 30px;
+    height: 40px;
   }
   body {
-    margin: 30px;
+    margin: 40px;
   }
   .header {
-    height: 30px;
+    height: 40px;
   }
   .header svg {
     height: 14px;
@@ -769,4 +769,43 @@ container .iconContainer h3 {
 
 .popup-footer .secondary:active {
   color: #91d2fb;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: row;
+  color: #7C8D9F;
+  margin-left: 20px;
+}
+
+.status::before {
+  display: inline-block;
+  content: '';
+  height: 6px;
+  width: 6px;
+  box-sizing: border-box;
+  background-color: #36D068;
+  border-radius: 4pc;
+  margin-right: 5px;
+}
+
+select {
+  direction: rtl;
+  background: none;
+  appearance: none;
+  border: none;
+  font: 400 14px/22px "nutanix_soft", san-serif;
+  color: white;
+  -webkit-appearance: none;
+  outline: none;
+  font-weight: 500;
 }
