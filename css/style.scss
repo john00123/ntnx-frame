@@ -59,6 +59,7 @@ header {
   @include flex(center,space-between, row);
   @include transition(all);
   svg{
+    @include transition(all);
     height: 18px;
     fill:$background-color-2;
     opacity: 0.8;
@@ -214,10 +215,11 @@ container{
     height: 40px;
     svg{
       height: 14px;
-      display: none;
       fill:$background-color-2;
-      opacity: 0.8;
+      opacity: 0;
       margin-right: 20px;
+      transform: translateX(-20px);
+      margin-right: -20px;
     }
   }
 }
