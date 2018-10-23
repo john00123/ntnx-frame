@@ -6,7 +6,17 @@ const nutanixLogo = `
   </svg>`
 
 
-const fullpage = `<div class='header'><div class='left'><h3> Instance Name</h3> </div><div class='right'> <p class='status'>Running Air 4BG</p> <button class='user'></button></div>`
+const fullpage = `
+  <div class='header'>
+    <div class='left'>
+      <h3> Instance Name</h3>
+    </div>
+
+    <div class='screen-switcher'></div>
+    <div class='right'>
+      <p class='status'>Running Air 4BG</p>
+      <button class='user'></button>
+    </div>`
 
 const screens = `<div class='screens'>
   <div class='screenblock test-page-1'>

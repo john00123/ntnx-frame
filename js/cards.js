@@ -39,10 +39,10 @@ $('body').keypress(function(e){
 $( document ).on( "mousemove", function( event ) {
   const screen = $('.screens');
   const container = $('container');
-  if( event.pageY < 10 ){
+  $('.screen-switcher').click(function(){
     screen.removeClass('expanded');
     container.addClass('expanded-container');
-  }
+  });
     if( event.pageY > 150 ){
     screen.addClass('expanded');
     container.removeClass('expanded-container');

@@ -52,7 +52,9 @@ header {
   @include size(60px, 100%);
   @include flex(center,space-between, row);
   background-color: rgba(0,0,0,0.2);
-    padding: 0 20px;
+  margin: auto;
+  padding: 0 20px;
+
   svg{
     height: 20px;
     fill:$background-color-2;
@@ -60,19 +62,63 @@ header {
     margin-right: 20px;
   }
 
-  margin: auto;
+  .screen-switcher{
+    @include size(18px, 18px);
+    border: 2px solid white;
+    border-radius: 2px;
+    position: relative;
+    outline: 1px solid transparent;
+    transform: translate(14px);
 
 
-  .left{
-    @include flex(center,flex-start, row);
-    color: $white;
+    &:before, &:after{
+      position: absolute;
+      outline: 1px solid transparent;
+      display: inline-block;
+      content: '';
+      @include size(20px, 20px);
+      border-right: 2px solid rgba(255,255,255,0.5);
+      border-left: 2px solid rgba(255,255,255,0.5);
+      @include transition(all);
+      will-change: width;
+    }
+
+    &:before{
+      @include size(13px, 28px);
+      left:-7px;
+      top:1px;
+    }
+
+    &:after{
+      @include size(8px, 36px);
+      left:-11px;
+      top:4px;
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    &:hover{
+      cursor: pointer;
+      &:before{
+        @include size(13px, 32px);
+        left:-9px;
+        top:1px;
+      }
+
+      &:after{
+        @include size(8px, 44px);
+        left:-15px;
+        top:4px;
+      }
+    }
 
   }
 
-  .right{
+
+  .left, .right{
     @include flex(center,flex-start, row);
     color: $white;
   }
+
 
   .status{
     @include flex(center,flex-start, row);

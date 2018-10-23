@@ -162,8 +162,8 @@ header {
   justify-content: space-between;
   flex-direction: row;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 0 20px;
   margin: auto;
+  padding: 0 20px;
 }
 
 .header svg {
@@ -173,15 +173,69 @@ header {
   margin-right: 20px;
 }
 
-.header .left {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  color: #FFFFFF;
+.header .screen-switcher {
+  height: 18px;
+  width: 18px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 2px;
+  position: relative;
+  outline: 1px solid transparent;
+  transform: translate(14px);
 }
 
-.header .right {
+.header .screen-switcher:before, .header .screen-switcher:after {
+  position: absolute;
+  outline: 1px solid transparent;
+  display: inline-block;
+  content: '';
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: width;
+}
+
+.header .screen-switcher:before {
+  height: 13px;
+  width: 28px;
+  box-sizing: border-box;
+  left: -7px;
+  top: 1px;
+}
+
+.header .screen-switcher:after {
+  height: 8px;
+  width: 36px;
+  box-sizing: border-box;
+  left: -11px;
+  top: 4px;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.header .screen-switcher:hover {
+  cursor: pointer;
+}
+
+.header .screen-switcher:hover:before {
+  height: 13px;
+  width: 32px;
+  box-sizing: border-box;
+  left: -9px;
+  top: 1px;
+}
+
+.header .screen-switcher:hover:after {
+  height: 8px;
+  width: 44px;
+  box-sizing: border-box;
+  left: -15px;
+  top: 4px;
+}
+
+.header .left, .header .right {
   display: flex;
   align-items: center;
   justify-content: flex-start;
