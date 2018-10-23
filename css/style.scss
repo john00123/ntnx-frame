@@ -43,17 +43,16 @@ header, aside, footer{
 
 header {
   @include size(60px, 100%);
-  padding: 0 20px;
   top:     0;
   left:    0;
   z-index: 20;
-  background-color: rgba(0,0,0,0.2);
-
-
 }
+
 .header{
   @include size(60px, 100%);
   @include flex(center,space-between, row);
+  background-color: rgba(0,0,0,0.2);
+    padding: 0 20px;
   svg{
     height: 20px;
     fill:$background-color-2;
@@ -115,15 +114,21 @@ header {
 }
 
 .screenblock{
-  padding: 10px;
+  padding: 10px 20px;
 }
 
+
+.expanded-container{
+  transform: translateY(150px);
+  opacity: 0.4;
+}
 
 container{
   @include grid(130px,1fr,20px);
   padding: 30px;
   max-width: 980px;
   margin: auto;
+  @include transition(all);
 
   .iconContainer{
     > * {

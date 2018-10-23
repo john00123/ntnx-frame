@@ -6,10 +6,10 @@ const nutanixLogo = `
   </svg>`
 
 
-const fullpage = `<div class='header'><div class='left'><h3> Instance Name</h3> </div><div class='right'> <p class='status'>Running</p> <button class='user'></button></div>`
+const fullpage = `<div class='header'><div class='left'><h3> Instance Name</h3> </div><div class='right'> <p class='status'>Running Air 4BG</p> <button class='user'></button></div>`
 
 const screens = `<div class='screens'>
-  <div class='screenblock'>
+  <div class='screenblock test-page-1'>
   <img src='../img/10-10--thumb.jpg'>
   <h3> screen name </h3>
   </div>
@@ -25,6 +25,6 @@ const screens = `<div class='screens'>
 
 
 //initial setup
-$('header').before(screens);
+$('header').prepend(screens);
 $('header').append(fullpage);
 $('.left').prepend(nutanixLogo);
