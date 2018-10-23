@@ -6,11 +6,19 @@ const nutanixLogo = `
   </svg>`
 
 
-const fullpage = `<div class='header'><div class='left'><h3> Instance Name</h3> </div><button class='user'></button></div>`
+const fullpage = `<div class='header'><div class='left'><h3> Instance Name</h3> </div><div class='right'> <p class='status'>Running</p> <button class='user'></button></div>`
 
 const screens = `<div class='screens'>
   <div class='screenblock'>
+  <img src='../img/10-10--thumb.jpg'>
+  <h3> screen name </h3>
+  </div>
+  <div class='screenblock'>
   <img src='../img/10-13--thumb.jpg'>
+  <h3> screen name </h3>
+  </div>
+  <div class='screenblock'>
+  <img src='../img/10-12--thumb.jpg'>
   <h3> screen name </h3>
   </div>
 </div>`

@@ -62,13 +62,31 @@ header {
   }
 
   margin: auto;
-  max-width: 980px;
+
 
   .left{
     @include flex(center,flex-start, row);
     color: $white;
-    font-weight: 600;
 
+  }
+
+  .right{
+    @include flex(center,flex-start, row);
+    color: $white;
+  }
+
+  .status{
+    @include flex(center,flex-start, row);
+    margin-right: 20px;
+    font-weight: 500;
+    &:before{
+      @include size(6px, 6px);
+      content:'';
+      background-color: $green-1;
+      display: inline-block;
+      margin-right: 10px;
+      border-radius: 4pc;
+    }
   }
 
   .user{
@@ -76,12 +94,18 @@ header {
   }
 }
 
+.expanded{
+  height: 0!important;
+}
+
 .screens{
   @include size( 150px, 100%);
   @include flex (center, center, row);
   background-color: rgba(0,0,0,0.4);
+  @include transition(all);
+  overflow: hidden;
   img{
-    @include size (100px, auto);
+    @include size (80px, auto);
   }
   h3{
     margin-top: 10px;
@@ -92,7 +116,6 @@ header {
 
 .screenblock{
   padding: 10px;
-  
 }
 
 

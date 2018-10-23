@@ -164,7 +164,6 @@ header {
   justify-content: space-between;
   flex-direction: row;
   margin: auto;
-  max-width: 980px;
 }
 
 .header svg {
@@ -180,11 +179,42 @@ header {
   justify-content: flex-start;
   flex-direction: row;
   color: #FFFFFF;
-  font-weight: 600;
+}
+
+.header .right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  color: #FFFFFF;
+}
+
+.header .status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.header .status:before {
+  height: 6px;
+  width: 6px;
+  box-sizing: border-box;
+  content: '';
+  background-color: #36D068;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 4pc;
 }
 
 .header .user {
   height: 20px;
+}
+
+.expanded {
+  height: 0 !important;
 }
 
 .screens {
@@ -196,10 +226,12 @@ header {
   justify-content: center;
   flex-direction: row;
   background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
 }
 
 .screens img {
-  height: 100px;
+  height: 80px;
   width: auto;
   box-sizing: border-box;
 }

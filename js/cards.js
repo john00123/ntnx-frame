@@ -13,3 +13,16 @@ for (i=1; i<5; i++){
       <h3>appTitle</h3>
     </div>`)
 }
+
+
+$('body').keypress(function(e){
+  const screen = $('.screens');
+    if(e.which == 27){
+      if(screen.hasClass('expanded')){
+        screen.removeClass('expanded');
+      }
+      else{
+        screen.addClass('expanded');
+      }
+    }
+});
