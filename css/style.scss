@@ -31,6 +31,37 @@ h1 { line-height: 1.2 }
 .primary       { @include primary }
 .secondary-alt { @include secondary-alt }
 .secondary     { @include secondary }
+.terciary {
+  background: none;
+  color:white;
+  font: $p;
+  border: none;
+  width: 100px;
+  text-align: right;
+  position: relative;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.dropdown{
+  position: absolute;
+  display: none;
+  background-color:rgba(0,0,0,0.6);
+  padding: 8px 20px;;
+  top:60px;
+  line-height: 2;
+  right: 100px;
+  list-style: none;
+  border-radius: 0 0 4px 4px;
+  li{
+    color:$font-color-2;
+    &:hover{
+      color:white;
+      cursor: pointer;
+    }
+  }
+}
 
 // color and size
 
@@ -213,7 +244,7 @@ container{
   .header{
 
     height: 40px;
-    svg{
+    .logo{
       height: 14px;
       fill:$background-color-2;
       opacity: 0;
@@ -221,6 +252,10 @@ container{
       transform: translateX(-20px);
       margin-right: -20px;
     }
+  }
+
+  .dropdown{
+    top:40px;
   }
 }
 
@@ -420,14 +455,14 @@ container{
 .status{
   @include flex(center, stretch, row);
   color:$font-color-3;
-  margin-left: 20px;
+
   &::before{
     display: inline-block;
     content: '';
     @include size(6px, 6px);
     background-color: $green-1;
     border-radius: 4pc;
-    margin-right: 5px;
+    margin-right: 10px;
   }
 }
 

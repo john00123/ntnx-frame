@@ -138,6 +138,41 @@ h1 {
   color: #91d2fb;
 }
 
+.terciary {
+  background: none;
+  color: white;
+  font: 400 14px/22px "nutanix_soft", san-serif;
+  border: none;
+  width: 100px;
+  text-align: right;
+  position: relative;
+}
+
+.terciary:hover {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 20px;
+  top: 60px;
+  line-height: 2;
+  right: 100px;
+  list-style: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown li {
+  color: #627386;
+}
+
+.dropdown li:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .fw {
   width: 100%;
 }
@@ -351,13 +386,16 @@ container .iconContainer h3 {
   .header {
     height: 40px;
   }
-  .header svg {
+  .header .logo {
     height: 14px;
     fill: #37414B;
     opacity: 0;
     margin-right: 20px;
     transform: translateX(-20px);
     margin-right: -20px;
+  }
+  .dropdown {
+    top: 40px;
   }
 }
 
@@ -797,7 +835,6 @@ container .iconContainer h3 {
   justify-content: stretch;
   flex-direction: row;
   color: #7C8D9F;
-  margin-left: 20px;
 }
 
 .status::before {
@@ -808,7 +845,7 @@ container .iconContainer h3 {
   box-sizing: border-box;
   background-color: #36D068;
   border-radius: 4pc;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 select {

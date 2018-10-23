@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="4px" viewBox="0 0 6 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dropdown-/-Single-Select-/-Expanded" transform="translate(-184.000000, -13.000000)" fill="#343536">
+            <path d="M184,16.2006327 C184,16.4073305 184.072957,16.6098069 184.219857,16.7658832 C184.512675,17.0780389 184.986895,17.0780389 185.280698,16.7658832 L187.000125,14.9309251 L188.719551,16.7658832 C189.012366,17.0780389 189.486589,17.0780389 189.780389,16.7658832 C190.073204,16.4537306 190.073204,15.9464811 189.780389,15.6343253 L187.529558,13.2341168 C187.236741,12.9219611 186.76252,12.9219611 186.468717,13.2341168 L184.219857,15.6353823 C184.072957,15.7914586 184,15.9970994 184,16.2006327" id="Arrow" transform="translate(187.000000, 15.000000) rotate(-180.000000) translate(-187.000000, -15.000000) "></path>
+        </g>
+    </g>
+</svg>
