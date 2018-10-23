@@ -227,13 +227,26 @@ header {
   flex-direction: row;
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
   overflow: hidden;
+}
+
+.screens:hover {
+  cursor: pointer;
 }
 
 .screens img {
   height: 80px;
   width: auto;
   box-sizing: border-box;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0.5;
+  will-change: transform, opacity;
+}
+
+.screens img:hover {
+  opacity: 1;
+  transform: scale(1.04);
 }
 
 .screens h3 {
@@ -259,6 +272,7 @@ container {
   max-width: 980px;
   margin: auto;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
 }
 
 container .iconContainer {
@@ -272,6 +286,7 @@ container .iconContainer {
   border-radius: 4px;
   height: 64px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform, opacity;
 }
 
 container .iconContainer > * {
@@ -290,7 +305,7 @@ container .iconContainer:hover {
 
 container .iconContainer:active {
   transform: scale(1);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 container .iconContainer img {

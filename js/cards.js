@@ -16,37 +16,7 @@ for (i=1; i<5; i++){
 }
 };
 
-
-
-function reverse(){
-for (i=2; i<5; i++){
-  $('container').append(`
-    <div class='iconContainer'>
-      <img src='../img/icon${i}.png'/>
-      <h3>appTitle</h3>
-    </div>`)
-}
-for (i=3; i<5; i++){
-  $('container').append(`
-    <div class='iconContainer'>
-      <img src='../img/icon${i}.png'/>
-      <h3>appTitle</h3>
-    </div>`)
-}
-};
-
 initial();
-
-$('.test-page-1').on( "mouseenter", function() {
-  const container = $('container');
-  reverse();
-});
-
-$('.test-page-1').on( "mouseleave", function() {
-  $('.iconContainer').remove();
-  initial();
-  container.slideUp('slow');
-});
 
 $('.screens').addClass('expanded');
 

@@ -102,9 +102,21 @@ header {
   @include flex (center, center, row);
   background-color: rgba(0,0,0,0.4);
   @include transition(all);
+  will-change: transform;
   overflow: hidden;
+  &:hover{
+    cursor: pointer;
+
+  }
   img{
     @include size (80px, auto);
+    @include transition(transform);
+    opacity: 0.5;
+    will-change: transform, opacity;
+    &:hover{
+      opacity: 1;
+      transform: scale(1.04);
+    }
   }
   h3{
     margin-top: 10px;
@@ -129,12 +141,14 @@ container{
   max-width: 980px;
   margin: auto;
   @include transition(all);
+  will-change: transform;
 
   .iconContainer{
     > * {
       user-select: none;
       &::selection { background: transparent; }
     }
+
     user-select: none;
     @include flex(center, center, column);
     background-color: rgba(0,0,0,0.2);
@@ -142,6 +156,8 @@ container{
     border-radius: 4px;
     height: 64px;
     @include transition(all);
+    will-change: transform, opacity;
+
     &:hover{
       transform: scale(1.04);
       cursor: pointer;
@@ -150,7 +166,7 @@ container{
 
     &:active{
       transform: scale(1.0);
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.6);
     }
     img {height:64px;}
     h3{
