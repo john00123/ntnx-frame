@@ -57,7 +57,7 @@ header {
 }
 
 header, .subheader { @include size(60px, 100%) }
-header, .right, .left, .subheader { @include flex(center, space-between, row) }
+header, .right, .left, .subheader, li { @include flex(center, space-between, row) }
 .right > * { margin-right: 20px }
 .left  > * { margin-left : 20px }
 
@@ -65,19 +65,67 @@ header, .right, .left, .subheader { @include flex(center, space-between, row) }
   top:60px;
   z-index : 2;
   border-bottom: 1px solid $border-color-3;
-  color:red;
+  color:$font-color-2;
 }
 
+.sub-item, li{
+  &:hover{
+    color: $blue-1;
+    cursor: pointer;
+  }
+}
+
+.sub-active{
+  color:$font-color-1;
+  position: relative;
+  &:after{
+    @include size(2px, 100%);
+    content: '';
+    position: absolute;
+    bottom:-25px;
+    left: 0;
+    background-color: $blue-1;
+  }
+
+}
+
+.side-active:hover .sub-active:hover{ color:$font-color-1 }
 
 //sidebar
 
 aside{
   height: calc(100vh - 120px);
-  width: 280px;
+  width: 240px;
   border-right: 1px solid $border-color-3;
   left:0;
   top:120px;
+  padding: 20px;
+  color:$font-color-2;
 }
+
+li{
+  height: 35px;
+}
+
+.side-active{
+  background-color: $semi-white-blue;
+  border-right: 2px solid $blue-1;
+  margin: 0 -21px 0 -20px ;
+  padding: 0 20px;
+  color:$font-color-1;
+}
+
+.side-active-alt{
+  background-color: transparent;
+  border: none;
+}
+
+.child{
+  margin-left: 0px;
+  border-left: 2px solid $border-color-3;
+  padding:0 20px;
+}
+
 
 container{
   display: block;

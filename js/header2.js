@@ -16,5 +16,10 @@ const subHeader = ['Systems', 'Status','Launchpads','Settings'];
 $('header').append(frameHeader);
 $('header').after(`<div class='subheader'><div class='left'></div></div>`);
 
-const appendSubHeader = subHeader.map( x => `<h3>${x}</h3>`);
-$('.subheader .left').append(appendSubHeader);
+const appendSubHeader = subHeader.map( x => x ==='Systems' ? `<h3 class='sub-item sub-active'>${x}</h3>` : `<h3 class='sub-item'>${x}</h3>`);
+$('.subheader .left').append(appendSubHeader)
+
+$('.sub-item').click(function(){
+  $('.sub-item').removeClass('sub-active');
+  $(this).addClass('sub-active');
+})

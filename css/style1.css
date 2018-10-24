@@ -165,7 +165,7 @@ header, .subheader {
   box-sizing: border-box;
 }
 
-header, .right, .left, .subheader {
+header, .right, .left, .subheader, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -184,15 +184,65 @@ header, .right, .left, .subheader {
   top: 60px;
   z-index: 2;
   border-bottom: 1px solid #F2F4F6;
-  color: red;
+  color: #627386;
+}
+
+.sub-item:hover, li:hover {
+  color: #22A5F7;
+  cursor: pointer;
+}
+
+.sub-active {
+  color: #22272E;
+  position: relative;
+}
+
+.sub-active:after {
+  height: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  background-color: #22A5F7;
+}
+
+.side-active:hover .sub-active:hover {
+  color: #22272E;
 }
 
 aside {
   height: calc(100vh - 120px);
-  width: 280px;
+  width: 240px;
   border-right: 1px solid #F2F4F6;
   left: 0;
   top: 120px;
+  padding: 20px;
+  color: #627386;
+}
+
+li {
+  height: 35px;
+}
+
+.side-active {
+  background-color: #f4fbff;
+  border-right: 2px solid #22A5F7;
+  margin: 0 -21px 0 -20px;
+  padding: 0 20px;
+  color: #22272E;
+}
+
+.side-active-alt {
+  background-color: transparent;
+  border: none;
+}
+
+.child {
+  margin-left: 0px;
+  border-left: 2px solid #F2F4F6;
+  padding: 0 20px;
 }
 
 container {

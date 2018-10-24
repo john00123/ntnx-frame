@@ -9,7 +9,7 @@ const nutanixLogo = `
 const fullpage = `
   <div class='header'>
     <div class='left'>
-      <h3> Instance Name</h3>
+      <h3>Instance Name</h3>
     </div>
 
     <div class='screen-switcher'></div>
