@@ -1,0 +1,88 @@
+//Comment for compiler
+@import '../../_ntnx/variables';
+@import '../../_ntnx/mixins';
+
+html   { @include font }
+body {
+  margin    : 60px;
+  background: white;
+  height    : calc(100vh - 60px);
+  width     : 100vw;
+  overflow  : hidden;
+}
+
+//fonts
+h1 { font: $h1 }
+h2 { font: $h2 }
+h3 { font: $h3 }
+h4 { font: $h4 }
+p  { font: $p  }
+a  { @include link }
+h1 { line-height: 1.2 }
+
+//primitives
+
+.primary       { @include primary }
+.secondary-alt { @include secondary-alt }
+.secondary     { @include secondary }
+
+
+// color and size
+
+[data-type='alt']{ color:$font-color-3 }
+.fw { width: 100% }
+
+
+//header
+
+header, aside, footer, .subheader{
+  position        : fixed;
+  background-color: white;
+  left : 0;
+  font-weight: 500;
+  z-index : 2;
+}
+
+header {
+  @include flex(center, space-between, row);
+  background-color: $background-color-1;
+  padding : 0 20px;
+  color   : white;
+  top     : 0;
+
+  .logo{
+    height: 16px;
+    fill  : $dark-grey-3;
+  }
+}
+
+header, .subheader { @include size(60px, 100%) }
+header, .right, .left, .subheader { @include flex(center, space-between, row) }
+.right > * { margin-right: 20px }
+.left  > * { margin-left : 20px }
+
+.subheader{
+  top:60px;
+  z-index : 2;
+  border-bottom: 1px solid $border-color-3;
+  color:red;
+}
+
+
+//sidebar
+
+aside{
+  height: calc(100vh - 120px);
+  width: 280px;
+  border-right: 1px solid $border-color-3;
+  left:0;
+  top:120px;
+}
+
+container{
+  display: block;
+  margin-left: 200px;
+  margin-top: 120px;
+  width : calc(100vw - 260px);
+  height: calc(100vh - 120px ) ;
+}

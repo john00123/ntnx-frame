@@ -36,15 +36,14 @@ $('body').keypress(function(e){
 });
 
 
-$( document ).on( "mousemove", function( event ) {
-  const screen = $('.screens');
-  const container = $('container');
-  $('.screen-switcher').click(function(){
-    screen.removeClass('expanded');
-    container.addClass('expanded-container');
-  });
-    if( event.pageY > 150 ){
-    screen.addClass('expanded');
-    container.removeClass('expanded-container');
-  }
+const screen = $('.screens');
+const container = $('container');
+$('.screen-switcher').click(function(){
+  screen.removeClass('expanded');
+  container.addClass('expanded-container');
 });
+
+$('.screens').on('mouseleave',function(){
+  screen.addClass('expanded');
+  container.removeClass('expanded-container');
+})
