@@ -133,4 +133,6 @@ container{
   margin-top: 120px;
   width : calc(100vw - 260px);
   height: calc(100vh - 120px ) ;
+  background-color: $background-color-3;
+  @include flex(center, center, column);
 }

@@ -251,4 +251,9 @@ container {
   margin-top: 120px;
   width: calc(100vw - 260px);
   height: calc(100vh - 120px);
+  background-color: #F2F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
