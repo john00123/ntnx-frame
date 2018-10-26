@@ -252,8 +252,7 @@ td {
   padding: 20px;
   @include flex(center, center, column);
   position: relative;
-  border-bottom: 1px solid $border-color-3;
-  border-left: 1px solid $border-color-3;
+  box-shadow: 1px 1px 0 0.5px $border-color-3;
   @include transition(opacity);
   will-change: opacity;
   &:first-child{border-left: none;}
@@ -284,5 +283,5 @@ td {
 }
 
 .Applications .card-footer{
-  border-top: none;
+  border-top: 1px solid $border-color-3;
 }
