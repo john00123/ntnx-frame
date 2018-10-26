@@ -275,7 +275,7 @@ td {
 }
 
 .Applications .card-body{
-  @include grid(100px, 1fr, 0);
+  @include grid(150px, 1fr, 0);
 
   img{
     height: 52px;
