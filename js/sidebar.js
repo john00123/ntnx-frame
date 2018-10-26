@@ -33,7 +33,7 @@ function all(){
 //initial setup
 $('aside').append(steps.map(steps => listItem(steps)));
 $('.child').hide();
-$('.pos1').addClass('side-active');
+$('.child-pos1').addClass('side-active');
 $('.parent').click(function(){
   $('.parent, .child').removeClass('side-active');
   $(this).addClass('side-active');
