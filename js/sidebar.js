@@ -1,11 +1,47 @@
 
-let steps = [
+const systemSide = [
   { number: 1,
-    step: 'Sandbox',
-  },
+    step: 'Sandbox'},
   { number: 2,
     step: 'Utility Servers',
-    children : ['demo-utility-0' , 'demo-utility-1']
+    children : ['demo-utility-0' , 'demo-utility-1']},
+  ]
+
+
+const statusSide = [
+  { number: 1,
+    step: 'Servers',
+  },
+]
+
+const launcherSide = [
+  { number: 1,
+    step: 'Office Apps',
+    children : ['Layout' , 'Appearance','Settings','Instance Pools']
+  },
+  { number: 2,
+    step: 'Basic Applications',
+    children : ['Layout' , 'Appearance','Settings','Instance Pools']
+  },
+  { number: 3,
+    step: 'Explorer',
+    children : ['Layout' , 'Appearance','Settings','Instance Pools']
+  },
+  { number: 4,
+    step: 'Paint',
+    children : ['Layout' , 'Appearance','Settings','Instance Pools']
+  },
+  { number: 5,
+    step: 'Chrome',
+    children : ['Layout' , 'Appearance','Settings','Instance Pools']
+  },
+  { number: 6,
+    step: 'Notepad',
+    children : ['Layout' , 'Appearance','Settings','Instance Pools']
+  },
+  { number: 7,
+    step: 'Office-Desktop-1',
+    children : ['Layout' , 'Appearance','Settings','Instance Pools']
   },
   ]
 
@@ -13,40 +49,45 @@ let steps = [
 function listItem(data){
   if(('children' in data)){
     const child = data.children;
-    return( `<li class='parent pos${data.number}'> ${data.step}</li>
+    return( `
+      <li class='parent pos${data.number}'> ${data.step}</li>
       ${child.map(c =>`<li class='child pos${data.number}'> ${c}</li>`).join(' ')}
     `)
 
   } else {
     return(
-      `<li class='parent child-pos${data.number}'> ${data.step}</li>`
+      `<li class='parent no-child${data.number}'> ${data.step}</li>`
     )
   }
 }
 
-function all(){
-  $("aside").each(function(){
-    this.value=this.value.replace(/,/g, "");
-})}
-
 
 //initial setup
-$('aside').append(steps.map(steps => listItem(steps)));
-$('.child').hide();
-$('.child-pos1').addClass('side-active');
-$('.parent').click(function(){
-  $('.parent, .child').removeClass('side-active');
-  $(this).addClass('side-active');
 
+sideBar(systemSide)
 
-  if($(this).hasClass('pos2')){
-    $(this).addClass('side-active-alt');
-    $('.child').show();
-    $('.child:eq(0)').addClass('side-active');
-  } else{ $('.child').hide()}
-})
+function sideBar(source){
+  $('aside').html(source.map(steps => listItem(steps)).join(''));
 
-$('.child').click(function(){
-  $('.child').removeClass('side-active');
-  $(this).addClass('side-active');
-})
+  //hide all the child elements
+  $('.child').hide();
+  $('.parent:eq(0)').addClass('side-active');
+  $('.parent').click(function(){
+    $('.child').hide();
+    $('.parent, .child').removeClass('side-active');
+
+    $(this).addClass('side-active');
+    for(i=1;i<=7;i++){
+      if($(this).hasClass(`pos${i}`)){
+        $(this).addClass('side-active-alt');
+        $(`.pos${i}`).show();
+        $(`.pos${i}:eq(1)`).addClass('side-active');
+      }
+    }
+  })
+
+  $('.child').click(function(){
+    $('.child').removeClass('side-active');
+    $(this).addClass('side-active');
+  });
+}
