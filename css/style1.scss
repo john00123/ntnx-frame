@@ -8,6 +8,7 @@ body {
   background   : white;
   width        : calc(100vw - 240px);
   min-height   : calc(100vh - 160px);
+  @include inputStyle
 }
 
 aside{
@@ -171,7 +172,7 @@ container{
 //card grid
 
 .grid{
-  @include grid(300px, 1fr, 20px);
+  @include grid(500px, 1fr, 20px);
   width : 100%;
 }
 
@@ -182,7 +183,6 @@ container{
   @include transition(all);
   background : white;
   will-change: box-shadow;
-
   &:hover { @include shadow }
 }
 
@@ -198,7 +198,6 @@ container{
   color         : $blue-1;
   border-top    : 1px solid $border-color-3;
   font-weight   : 500;
-
   &:hover { cursor: pointer}
 }
 
@@ -259,8 +258,6 @@ td {
 //apps card
 
 .Applications{
-  grid-column         : 3;
-  grid-row            : 1 / span 2;
 
   .card-body{
     @include grid(150px, 1fr, 0);
@@ -331,5 +328,8 @@ td {
   }
 
   td:last-child{ text-align: left }
+}
 
+input[type='number']{
+  width: 100px!important;
 }

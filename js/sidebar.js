@@ -81,7 +81,7 @@ function sideBar(source){
       if($(this).hasClass(`pos${i}`)){
         $(this).addClass('side-active-alt');
         $(`.pos${i}`).show();
-        $(`.pos${i}:eq(1)`).addClass('side-active');
+        $(`.pos${i}:eq(1x)`).addClass('side-active');
       }
     }
   })

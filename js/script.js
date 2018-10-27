@@ -82,6 +82,37 @@ const features = [
   values: '<input type="checkbox"/>'},
 ];
 
+const timeLimits = [
+  {label:'User inactivity timeout',
+  values: '<input type="number" value="10"/>'},
+
+  {label:'Idle timeout',
+  values: '<input type="number" value="10"/>'},
+
+  {label:'Max session duration',
+  values: '<input type="number" value="60"/>'},
+
+  {label:'',
+  values: ''},
+
+];
+
+
+const network = [
+  {label:'Max bandwith (kbps) ',
+  values: '<input type="number" value="10"/>'},
+
+  {label:'Max frame rate (fps)',
+  values: '<input type="range" value="60"/>'},
+
+  {label:'Max videp bit rate',
+  values: '<input type="range" value="16"/>'},
+
+  {label:'',
+  values: ''},
+
+];
+
 
 function cardIcons(){
   $('.Applications .card-body').html('');
@@ -135,35 +166,42 @@ function card(name, source, action){
 `)};
 
 card('Sandox',status,'Power On');
-card('Applications', backup,'null');
 card('Backup', backup,'Create Backup');
-
+card('Applications', backup,'null');
 cardIcons();
 
 
 $('.sub-item:eq(0)').click( function(){
+  sideBar(systemSide)
+
   $('container').html('');
   $('container').append('<div class="grid"></div>');
   card('Sandox',status,'Power On');
-  card('Applications', backup,'null');
   card('Backup', backup,'Create Backup');
+  card('Applications', backup,'null');
   cardIcons();
-  sideBar(systemSide)
+
 })
 
 $('.sub-item:eq(1)').click( function(){
+  sideBar(statusSide)
+
   $('container').html('');
   tableCreator('Servers', serverHeader, serverData);
-  sideBar(statusSide)
+
 })
 
 
 $('.sub-item:eq(2)').click( function(){
+  sideBar(launcherSide)
+  $('.pos1').click();
+  $('.child:eq(0)').click()
+
   $('container').html('');
   $('container').append('<div class="grid"></div>');
   card('Storage', storage,'null');
   card('Features', features,'null');
-  sideBar(launcherSide)
-  $('.pos1').click();
-  $('.child:eq(0)').click()
+  card('Time Limits (minutes)', timeLimits,'null');
+  card('Newtork', network,'null');
+
 })
