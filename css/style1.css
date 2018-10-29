@@ -460,8 +460,9 @@ td:last-child {
 
 .Applications .card-body {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   grid-gap: 0;
+  overflow: hidden;
 }
 
 .Applications .card-body .iconContainer {
@@ -491,7 +492,8 @@ td:last-child {
 
 .Applications .card-body .iconContainer:hover {
   cursor: pointer;
-  background-color: #f4fbff;
+  color: #22A5F7;
+  z-index: 10;
 }
 
 .Applications .card-body .iconContainer:hover:after {
@@ -548,4 +550,55 @@ input[type='range'] {
   all: unset !important;
   height: 2px !important;
   background: #22A5F7 !important;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  height: 12px;
+  width: 20px;
+  box-sizing: border-box;
+  margin-left: calc(100% - 20px);
+  background-color: #F2F4F6;
+  border: 1px solid #B8BFCA;
+  border-radius: 4pc;
+  position: relative;
+}
+
+input[type='checkbox']:hover {
+  cursor: pointer;
+}
+
+input[type='checkbox']:after {
+  content: '';
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: block;
+  border: 1px solid #627386;
+  height: 12px;
+  width: 12px;
+  box-sizing: border-box;
+  border-radius: 4pc;
+  background: white;
+  position: absolute;
+  left: -2px;
+}
+
+input[type='checkbox']:active {
+  background-color: #D5DAE0;
+  border-color: #9AA5B5;
+}
+
+input[type='checkbox']:checked {
+  border-color: transparent;
+  background-color: #22A5F7;
+}
+
+input[type='checkbox']:checked:after {
+  left: 8px;
+  border-color: #1b6dc6;
 }

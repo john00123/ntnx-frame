@@ -204,6 +204,9 @@ container{
 
 //table
 
+
+
+
 td {
   padding       : 0 20px;
   vertical-align: middle;
@@ -260,7 +263,8 @@ td {
 .Applications{
 
   .card-body{
-    @include grid(150px, 1fr, 0);
+    @include grid(120px, 1fr, 0);
+    overflow: hidden;
 
     .iconContainer{
       @include flex(center, center, column);
@@ -284,9 +288,11 @@ td {
       }
 
       &:hover{
-        cursor            : pointer;
-        background-color  : $semi-white-blue;
+        cursor          : pointer;
+        color           : $blue-1;
+
         &:after{color:$blue-1; opacity: 1;}
+        z-index: 10;
       }
     }
   }
@@ -337,4 +343,52 @@ input[type='range']{
   all:unset!important;
   height: 2px!important;
   background: $blue-1!important;
+}
+
+
+
+//toogle
+
+input[type='checkbox']{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  @include flex(center, flex-end, row);
+  @include size(12px, 20px);
+  margin-left: calc(100% - 20px);
+  background-color: $border-color-3;
+  border: 1px solid $border-color-1;
+  border-radius: 4pc;
+  position: relative;
+
+  &:hover{cursor: pointer;}
+
+  &:after{
+    content: '';
+    @include transition(all);
+    display: block;
+    border: 1px solid $grey-1;
+    @include size(12px, 12px);
+    border-radius: 4pc;
+    background: white;
+    position: absolute;
+    left: -2px;
+  }
+
+}
+
+input[type='checkbox']:active{
+  background-color: $border-color-2;
+  border-color: $grey-3;
+}
+
+
+input[type='checkbox']:checked{
+  border-color: transparent;
+  background-color: $blue-1;
+  &:after{
+    left: 8px;
+    border-color: $dark-blue-2;
+  }
+
 }
