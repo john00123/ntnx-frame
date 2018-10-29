@@ -75,13 +75,12 @@ function sideBar(source){
   $('.parent').click(function(){
     $('.child').hide();
     $('.parent, .child').removeClass('side-active');
-
     $(this).addClass('side-active');
     for(i=1;i<=7;i++){
       if($(this).hasClass(`pos${i}`)){
         $(this).addClass('side-active-alt');
         $(`.pos${i}`).show();
-        $(`.pos${i}:eq(1x)`).addClass('side-active');
+        $(`.pos${i}:eq(1)`).addClass('side-active');
       }
     }
   })
