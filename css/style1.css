@@ -541,5 +541,11 @@ td:last-child {
 }
 
 input[type='number'] {
-  width: 100px !important;
+  width: 80px !important;
+}
+
+input[type='range'] {
+  all: unset !important;
+  height: 2px !important;
+  background: #22A5F7 !important;
 }

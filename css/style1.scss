@@ -331,5 +331,10 @@ td {
 }
 
 input[type='number']{
-  width: 100px!important;
+  width: 80px!important;
+}
+input[type='range']{
+  all:unset!important;
+  height: 2px!important;
+  background: $blue-1!important;
 }
