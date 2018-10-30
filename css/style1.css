@@ -338,15 +338,11 @@ li {
 }
 
 .manage {
-  position: absolute;
-  bottom: 0;
   border-top: 1px solid #F2F4F6;
   color: #22A5F7;
-  width: calc(100% - 42px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  margin: 0 20px;
+  margin-top: 10px;
+  padding: 10px 0;
 }
 
 container {
@@ -390,6 +386,7 @@ container {
   display: inline-block;
   background: url("../img/playground.svg");
   background-size: contain;
+  background-position: center;
   margin-right: 20px;
   background-repeat: no-repeat;
 }

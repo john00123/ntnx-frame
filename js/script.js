@@ -7,8 +7,6 @@ const banner = `
     <div>
   </div>`
 
-
-
 const status = [
   {label:'Status',
   values: 'Stopped'},
@@ -43,7 +41,6 @@ const backup = [
   values: '20 days ago'},
 ];
 
-
 const storage = [
   {label:'Google Drive',
   values: '<input type="checkbox" checked/>'},
@@ -60,7 +57,6 @@ const storage = [
   {label:'',
   values: ''},
 ];
-
 
 const features = [
   {label:'Clipboard integration',
@@ -99,7 +95,6 @@ const timeLimits = [
   values: ''},
 
 ];
-
 
 const network = [
   {label:'Max bandwith (kbps) ',
@@ -151,7 +146,6 @@ function secondary(data){
 $('.page-actions').append(`<button class="secondary-alt">${data}</button>`)
 }
 
-
 function card(name, source, action){
   $('.grid').append( `
   <div class='card ${name}'>
@@ -183,16 +177,17 @@ function card(name, source, action){
   </div>
 `)};
 
-$('container').prepend(banner);
-card('Sandox',status,'Power On');
+
+
+card('Sandox', status,'Power On');
 card('Backup', backup,'Create Backup');
 card('Applications', backup,'null');
 cardIcons();
+$('container').prepend(banner);
 primary('Publish');
 
 $('.sub-item:eq(0)').click( function(){
   sideBar(systemSide)
-
   $('container').html('');
   $('container').append('<div class="grid"></div>');
   card('Sandox',status,'Power On');
@@ -205,10 +200,9 @@ $('.sub-item:eq(0)').click( function(){
 
 $('.sub-item:eq(1)').click( function(){
   sideBar(statusSide)
-
   $('container').html('');
   tableCreator('Viewing 7 Servers', serverHeader, serverData);
-  $('container h3').append('&nbsp; <a> Reload</a>');
+  $('container h3').append('&nbsp; <a> Reload </a>');
 })
 
 
@@ -223,5 +217,6 @@ $('.sub-item:eq(2)').click( function(){
   card('Features', features,'null');
   card('Time Limits (minutes)', timeLimits,'null');
   card('Newtork', network,'null');
-  $('li:last-child').addClass('manage');
+  $('li:last-child').addClass('manage').removeClass('parent').removeClass('no-child8');
+
 })

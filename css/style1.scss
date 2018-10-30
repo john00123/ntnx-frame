@@ -137,12 +137,13 @@ li{
 }
 
 .manage{
-  position: absolute;
-  bottom: 0;
+
   border-top: 1px solid $border-color-3;
   color: $blue-1;
-  width: calc(100% - 42px);
-  @include flex(center, center, row)
+  margin: 0 20px;
+  margin-top: 10px;
+  padding: 10px 0;
+
 }
 
 
@@ -181,6 +182,7 @@ container{
     display: inline-block;
     background: url('../img/playground.svg');
     background-size: contain;
+    background-position: center;
     margin-right: 20px;
     background-repeat: no-repeat;
   }

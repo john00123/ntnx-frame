@@ -44,7 +44,7 @@ const launcherSide = [
     children : ['Layout' , 'Appearance','Settings','Instance Pools']
   },
   { number: 8,
-    step: '⚙︎ Manage LauchPads',
+    step: 'Manage LauchPads',
   },
   ]
 
