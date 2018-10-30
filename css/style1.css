@@ -338,11 +338,11 @@ li {
 }
 
 .manage {
-  border-top: 1px solid #F2F4F6;
   color: #22A5F7;
   margin: 0 20px;
-  margin-top: 10px;
   padding: 10px 0;
+  margin-top: 10px;
+  border-top: 1px solid #F2F4F6;
 }
 
 container {
