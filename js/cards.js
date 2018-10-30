@@ -27,10 +27,12 @@ $('body').keypress(function(e){
       if(screen.hasClass('expanded')){
         screen.removeClass('expanded');
         container.addClass('expanded-container');
+        $('.desktopContainer').addClass('expanded-container')
       }
       else{
         screen.addClass('expanded');
         container.removeClass('expanded-container');
+        $('.desktopContainer').removeClass('expanded-container')
       }
     }
 });
@@ -38,12 +40,29 @@ $('body').keypress(function(e){
 
 const screen = $('.screens');
 const container = $('container');
+
 $('.screen-switcher').click(function(){
   screen.removeClass('expanded');
   container.addClass('expanded-container');
+  $('.desktopContainer').addClass('expanded-container');
 });
 
 $('.screens').on('mouseleave',function(){
   screen.addClass('expanded');
   container.removeClass('expanded-container');
+  $('.desktopContainer').removeClass('expanded-container');
 })
+
+$('.screenblock').append(`<div class='mini-grid'></div>`)
+for (i=1; i<5; i++){
+  $('.mini-grid').append(`
+    <div class='iconContainer small'>
+      <img src='../img/icon${i}.png'/>
+    </div>`)
+}
+
+$('container').before(`
+  <div class='desktopContainer'>
+    <img src='../img/os1.png'/>
+    <h3>Go to Desktop</h3>
+  </div>`);

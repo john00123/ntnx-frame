@@ -1,10 +1,13 @@
 const banner = `
   <div class='banner'>
+    <div>
     <h3>What is the Sandbox?</h3>
-    <p>Your Sandbox is a special instance that serves as the basis for creating all of your production instances. Its disk is often called a “Gold Master” or “Master Image”. When you launch the Sandbox desktop, you have full admin access to install new apps or apply system updates.</p>
+    <p>Your Sandbox is a special instance that serves as the basis for creating all of your production instances. Its disk is often called a “Gold Master” or “Master Image”.
+    When you launch the Sandbox desktop, you have full admin access to install new apps or apply system updates.</p>
+    <div>
   </div>`
 
-$('container').prepend(banner);
+
 
 const status = [
   {label:'Status',
@@ -140,6 +143,14 @@ function cardIcons(){
   }
 };
 
+function primary(data){
+$('container').prepend(`<div class="page-actions fw"><button class="primary">${data}</button></div>`)
+}
+
+function secondary(data){
+$('.page-actions').append(`<button class="secondary-alt">${data}</button>`)
+}
+
 
 function card(name, source, action){
   $('.grid').append( `
@@ -172,11 +183,12 @@ function card(name, source, action){
   </div>
 `)};
 
+$('container').prepend(banner);
 card('Sandox',status,'Power On');
 card('Backup', backup,'Create Backup');
 card('Applications', backup,'null');
 cardIcons();
-
+primary('Publish');
 
 $('.sub-item:eq(0)').click( function(){
   sideBar(systemSide)
@@ -187,15 +199,16 @@ $('.sub-item:eq(0)').click( function(){
   card('Backup', backup,'Create Backup');
   card('Applications', backup,'null');
   cardIcons();
-
+  $('container').prepend(banner);
+  primary('Publish');
 })
 
 $('.sub-item:eq(1)').click( function(){
   sideBar(statusSide)
 
   $('container').html('');
-  tableCreator('Servers', serverHeader, serverData);
-
+  tableCreator('Viewing 7 Servers', serverHeader, serverData);
+  $('container h3').append('&nbsp; <a> Reload</a>');
 })
 
 
@@ -210,8 +223,5 @@ $('.sub-item:eq(2)').click( function(){
   card('Features', features,'null');
   card('Time Limits (minutes)', timeLimits,'null');
   card('Newtork', network,'null');
+  $('li:last-child').addClass('manage');
 })
-
-
-// Test
-$('.sub-item:eq(2)').click();

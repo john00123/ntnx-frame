@@ -43,6 +43,9 @@ const launcherSide = [
     step: 'Office-Desktop-1',
     children : ['Layout' , 'Appearance','Settings','Instance Pools']
   },
+  { number: 8,
+    step: '⚙︎ Manage LauchPads',
+  },
   ]
 
 

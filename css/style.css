@@ -167,15 +167,15 @@ header {
 }
 
 .header svg {
-  height: 20px;
+  height: 17px;
   fill: #37414B;
   opacity: 0.8;
   margin-right: 20px;
 }
 
 .header .screen-switcher {
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   box-sizing: border-box;
   border: 2px solid white;
   border-radius: 2px;
@@ -199,16 +199,16 @@ header {
 }
 
 .header .screen-switcher:before {
-  height: 13px;
-  width: 28px;
+  height: 12px;
+  width: 26px;
   box-sizing: border-box;
   left: -7px;
   top: 1px;
 }
 
 .header .screen-switcher:after {
-  height: 8px;
-  width: 36px;
+  height: 7px;
+  width: 34px;
   box-sizing: border-box;
   left: -11px;
   top: 4px;
@@ -220,16 +220,16 @@ header {
 }
 
 .header .screen-switcher:hover:before {
-  height: 13px;
-  width: 32px;
+  height: 12px;
+  width: 30px;
   box-sizing: border-box;
   left: -9px;
   top: 1px;
 }
 
 .header .screen-switcher:hover:after {
-  height: 8px;
-  width: 44px;
+  height: 7px;
+  width: 42px;
   box-sizing: border-box;
   left: -15px;
   top: 4px;
@@ -310,7 +310,8 @@ header {
 }
 
 .screenblock {
-  padding: 10px 20px;
+  padding: 20px 20px 0px 20px;
+  position: relative;
 }
 
 .expanded-container {
@@ -376,6 +377,35 @@ container .iconContainer h3 {
   text-align: center;
 }
 
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14px, 14px));
+  grid-gap: 14px;
+  top: 20px;
+  transform: translate(20px, -70px);
+  pointer-events: none;
+}
+
+.mini-grid img {
+  opacity: 1;
+}
+
+.small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2px;
+  border-radius: 1px;
+  height: 14px;
+  width: 14px;
+}
+
+.small img {
+  height: 14px;
+}
+
 .user {
   background-image: url("../img/pyramid.png");
   background-size: cover;
@@ -386,4 +416,37 @@ container .iconContainer h3 {
   overflow: auto;
   border-radius: 3px;
   height: 30px !important;
+}
+
+.desktopContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 80px;
+  max-width: 980px;
+  margin: 80px auto -10px auto;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+  color: white;
+  border-radius: 4px;
+  grid-column: 1 / span 6;
+}
+
+.desktopContainer img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.desktopContainer:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.desktopContainer:active {
+  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.6);
 }

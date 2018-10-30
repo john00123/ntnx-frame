@@ -5,7 +5,7 @@
 html   { @include font }
 body {
   margin       : 120px 0 0 240px;
-  background   : white;
+  background   : $background-color-3;
   width        : calc(100vw - 240px);
   min-height   : calc(100vh - 160px);
   @include inputStyle
@@ -136,6 +136,15 @@ li{
   border-left  : 2px solid $border-color-3;
 }
 
+.manage{
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid $border-color-3;
+  color: $blue-1;
+  width: calc(100% - 42px);
+  @include flex(center, center, row)
+}
+
 
 //container
 
@@ -143,6 +152,7 @@ container{
   padding      : 20px ;
   height       : 100% ;
   min-height   : calc(100vh - 160px);
+  max-width    : 1500px;
   background   : $background-color-3;
   @include flex(center, flex-start, column);
 }
@@ -152,6 +162,7 @@ container{
 
 .banner{
   @include size(auto, 100%);
+  @include flex(center, space-between, row);
   color         : $dark-blue-2;
   padding       : 20px;
   background    : $light-blue-2;
@@ -161,6 +172,18 @@ container{
     margin-bottom : 12px;
     color         : $dark-blue-1;
   }
+
+  &:before{
+    content: '';
+    padding: 20px;
+    box-sizing: border-box;
+    @include size(70px, 80px);
+    display: inline-block;
+    background: url('../img/playground.svg');
+    background-size: contain;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+  }
 }
 
 .banner, .card , .state{
@@ -168,11 +191,16 @@ container{
   box-sizing   : border-box;
 }
 
+.page-actions{
+  @include flex(center, flex-start, row)
+  margin-bottom: 20px;
+  > * {margin-right: 10px;}
+}
 
 //card grid
 
 .grid{
-  @include grid(500px, 1fr, 20px);
+  @include grid(400px, 1fr, 20px);
   width : 100%;
 }
 
@@ -261,6 +289,8 @@ td {
 //apps card
 
 .Applications{
+
+  grid-row: 1 / span 2;
 
   .card-body{
     @include grid(120px, 1fr, 0);
