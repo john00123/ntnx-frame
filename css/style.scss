@@ -12,7 +12,6 @@ body {
   width: 100vw;
   overflow: hidden;
 }
-
 //fonts
 
 h1 { font: $h1 }
@@ -257,6 +256,10 @@ container{
   overflow: auto;
   border-radius: 3px;
   height: 30px!important;
+}
+
+.disabled{
+  pointer-events: none;
 }
 
 .desktopContainer{

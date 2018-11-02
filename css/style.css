@@ -418,6 +418,10 @@ container .iconContainer h3 {
   height: 30px !important;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 .desktopContainer {
   display: flex;
   align-items: center;

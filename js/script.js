@@ -183,8 +183,9 @@ card('Sandox', status,'Power On');
 card('Backup', backup,'Create Backup');
 card('Applications', backup,'null');
 cardIcons();
-$('container').prepend(banner);
 primary('Publish');
+$('container').prepend(banner);
+
 
 $('.sub-item:eq(0)').click( function(){
   sideBar(systemSide)
