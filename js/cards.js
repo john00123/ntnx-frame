@@ -47,11 +47,15 @@ $('.screen-switcher').click(function(){
   $('.desktopContainer').addClass('expanded-container');
 });
 
-$('.screens').on('mouseleave',function(){
-  screen.addClass('expanded');
-  container.removeClass('expanded-container');
-  $('.desktopContainer').removeClass('expanded-container');
-})
+
+$(document).mouseup(function(e) {
+  let screen = $('.screens');
+  if (screen.not(e.target) &&  screen.has(e.target).length === 0) {
+    screen.addClass('expanded');
+    container.removeClass('expanded-container');
+    $('.desktopContainer').removeClass('expanded-container');
+  }
+});
 
 $('.screenblock').append(`<div class='mini-grid'></div>`)
 for (i=1; i<5; i++){

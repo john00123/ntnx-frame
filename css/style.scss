@@ -277,13 +277,12 @@ container{
   grid-column: 1 / span 6;
 
   &:hover{
-    transform: scale(1.01);
+    // transform: scale(1.01);
     cursor: pointer;
     background-color: rgba(0,0,0,0.4);
   }
 
   &:active{
-    transform: scale(1.0);
     background-color: rgba(0,0,0,0.6);
   }
 }

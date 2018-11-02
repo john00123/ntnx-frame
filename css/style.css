@@ -441,12 +441,10 @@ container .iconContainer h3 {
 }
 
 .desktopContainer:hover {
-  transform: scale(1.01);
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
 .desktopContainer:active {
-  transform: scale(1);
   background-color: rgba(0, 0, 0, 0.6);
 }
