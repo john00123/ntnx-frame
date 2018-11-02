@@ -226,6 +226,11 @@ header {
   font-weight: 600;
 }
 
+.header .left span {
+  border-left: 1px solid #37414B;
+  padding-left: 10px;
+}
+
 .header .user {
   height: 20px;
 }
@@ -835,6 +840,8 @@ container .iconContainer h3 {
   justify-content: stretch;
   flex-direction: row;
   color: #7C8D9F;
+  border-right: 1px solid #37414B;
+  padding-right: 10px;
 }
 
 .status::before {
@@ -846,6 +853,10 @@ container .iconContainer h3 {
   background-color: #36D068;
   border-radius: 4pc;
   margin-right: 10px;
+}
+
+.actions {
+  width: 80px;
 }
 
 select {

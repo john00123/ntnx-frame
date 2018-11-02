@@ -16,6 +16,7 @@ const arrow =`
 
 const fullpage = `<div class='header'><div class='left'><h3> Instance Name &nbsp; <span data-type='alt' style='font-weight:400'>102.168.90.1</span></h3> </div>
   <div class='select-container'>
+    <p class='status'> Running </p>
     <div class='actions'>
       <button class='terciary'>
         Actions &nbsp;${arrow}
@@ -27,7 +28,7 @@ const fullpage = `<div class='header'><div class='left'><h3> Instance Name &nbsp
       </div>
     </div>
 
-    <p class='status'> Running </p>
+
   </div>
 </div>`
 
