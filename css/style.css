@@ -59,7 +59,8 @@ h1 {
   border-radius: 4px;
   padding: 11px 15px;
   color: #FFFFFF;
-  font: 500 14px/10px "nutanix_soft", san-serif;
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
   border: none;
   text-decoration: none;
   background-color: #22A5F7;
@@ -85,13 +86,13 @@ h1 {
 }
 
 .secondary-alt {
-  background-color: #FFFFFF;
   border: 1px solid #D5DAE0;
   border-radius: 4px;
   padding: 11px 15px;
-  font: 500 14px/10px "nutanix_soft", san-serif;
   color: #22272E;
+  font: 400 14px/10px "nutanix_soft", san-serif;
   text-decoration: none;
+  background-color: #FFFFFF;
   margin: 0;
   outline: none;
   transition: box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -107,18 +108,32 @@ h1 {
   color: #91d2fb;
 }
 
+.secondary-alt span {
+  height: 10px;
+  display: block;
+  font-weight: 500;
+  line-height: 9pt;
+}
+
 .secondary-alt:hover {
   box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
 }
 
+.secondary-alt span {
+  height: 10px;
+  display: block;
+  font-weight: 500;
+  line-height: 9pt;
+}
+
 .secondary {
-  background-color: #FFFFFF;
   border: 1px solid #D5DAE0;
   border-radius: 4px;
   padding: 11px 15px;
-  font: 500 14px/10px "nutanix_soft", san-serif;
   color: #22272E;
+  font: 400 14px/10px "nutanix_soft", san-serif;
   text-decoration: none;
+  background-color: #FFFFFF;
   margin: 0;
   outline: none;
 }
@@ -130,6 +145,13 @@ h1 {
 
 .secondary:active {
   color: #91d2fb;
+}
+
+.secondary span {
+  height: 10px;
+  display: block;
+  font-weight: 500;
+  line-height: 9pt;
 }
 
 .fw {
@@ -167,7 +189,7 @@ header {
 }
 
 .header svg {
-  height: 17px;
+  height: 20px;
   fill: #37414B;
   opacity: 0.8;
   margin-right: 20px;

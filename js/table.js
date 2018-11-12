@@ -62,6 +62,68 @@ const serverData =[
   status: 'Stopped'},
 ];
 
+const accountHeader = ['Account Name', 'Organization', 'Description', 'Website', 'Elasticity', 'Status']
+
+const accountData =[
+  {id: 200 ,
+  name: 'Demo Account 98',
+  organization:'Hachette',
+  description: 'Demo Instance',
+  website: 'http;//www.hachette-demo.com',
+  elasticity: '0 - 0 - 0 - 0',
+  status: 'Stopped'},
+
+  {id: 201,
+  name: 'Demo Account 101',
+  organization:'Hachette',
+  description: 'Demo Instance',
+  website: 'http;//www.hachette-demo.com',
+  elasticity: '0 - 0 - 0 - 0',
+  status: 'Stopped'},
+
+  {id: 203,
+  name: 'Demo Account 103',
+  organization:'Hachette',
+  description: 'Demo Instance',
+  website: 'http;//www.hachette-demo.com',
+  elasticity: '0 - 0 - 0 - 0',
+  status: 'Stopped'},
+
+  {id: 205,
+  name: 'Demo Account 105',
+  organization:'Hachette',
+  description: 'Demo Instance',
+  website: 'http;//www.hachette-demo.com',
+  elasticity: '0 - 0 - 0 - 0',
+  status: 'Stopped'},
+
+  {id:  207  ,
+  name: 'Demo Account 107 ',
+  organization:'Hachette',
+  description: 'Demo Instance',
+  website: 'http;//www.hachette-demo.com',
+  elasticity: '0 - 0 - 0 - 0',
+  status: 'Stopped'},
+
+  {id: 209,
+  name: 'Demo Account 109',
+  organization:'Hachette',
+  description: 'Demo Instance',
+  website: 'http;//www.hachette-demo.com',
+  elasticity: '0 - 0 - 0 - 0',
+  status: 'Stopped'},
+
+  {id: 220,
+  name: 'Demo Account 120',
+  organization:'Hachette',
+  description: 'Demo Instance',
+  website: 'http;//www.hachette-demo.com',
+  elasticity: '0 - 0 - 0 - 0',
+  status: 'Stopped'},
+];
+
+
+
 function tableCreator(title, sourceHeader, sourceData){
 $('container').append(`
   <h3 class='fw'>${title}</h3>
@@ -75,6 +137,25 @@ $('container').append(`
         <td>${data.private}</td>
         <td>${data.kind}</td>
         <td>${data.type}</td>
+        <td>${data.status}</td>
+        </tr>`).join('')}
+    </table>
+  </div>
+`)
+}
+
+function tableCreator2(title, sourceHeader, sourceData){
+$('container').append(`
+  <h3 class='fw'>${title}</h3>
+  <div class='table-container fw'>
+    <table class='fw'>
+      <tr> ${ sourceHeader.map(header => `<th>${header} ${sortArrows}</th>`).join('')}</tr>
+      ${sourceData.map(data => `<tr>
+        <td>${data.name}</td>
+        <td>${data.organization}</td>
+        <td>${data.description}</td>
+        <td>${data.website}</td>
+        <td>${data.elasticity}</td>
         <td>${data.status}</td>
         </tr>`).join('')}
     </table>
