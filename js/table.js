@@ -71,7 +71,7 @@ const accountData =[
   description: 'Demo Instance',
   website: 'http;//www.hachette-demo.com',
   elasticity: '0 - 0 - 0 - 0',
-  status: 'Stopped'},
+  status: `<span class='a'>A</span>`},
 
   {id: 201,
   name: 'Demo Account 101',
@@ -79,7 +79,7 @@ const accountData =[
   description: 'Demo Instance',
   website: 'http;//www.hachette-demo.com',
   elasticity: '0 - 0 - 0 - 0',
-  status: 'Stopped'},
+  status: `<span class='a'>A</span>`},
 
   {id: 203,
   name: 'Demo Account 103',
@@ -87,7 +87,7 @@ const accountData =[
   description: 'Demo Instance',
   website: 'http;//www.hachette-demo.com',
   elasticity: '0 - 0 - 0 - 0',
-  status: 'Stopped'},
+  status: `<span class='a'>A</span>`},
 
   {id: 205,
   name: 'Demo Account 105',
@@ -95,7 +95,7 @@ const accountData =[
   description: 'Demo Instance',
   website: 'http;//www.hachette-demo.com',
   elasticity: '0 - 0 - 0 - 0',
-  status: 'Stopped'},
+  status: `<span class='i'>I</span>`},
 
   {id:  207  ,
   name: 'Demo Account 107 ',
@@ -103,7 +103,7 @@ const accountData =[
   description: 'Demo Instance',
   website: 'http;//www.hachette-demo.com',
   elasticity: '0 - 0 - 0 - 0',
-  status: 'Stopped'},
+  status: `<span class='i'>I</span>`},
 
   {id: 209,
   name: 'Demo Account 109',
@@ -111,7 +111,7 @@ const accountData =[
   description: 'Demo Instance',
   website: 'http;//www.hachette-demo.com',
   elasticity: '0 - 0 - 0 - 0',
-  status: 'Stopped'},
+  status: `<span class='i'>I</span>`},
 
   {id: 220,
   name: 'Demo Account 120',
@@ -119,7 +119,7 @@ const accountData =[
   description: 'Demo Instance',
   website: 'http;//www.hachette-demo.com',
   elasticity: '0 - 0 - 0 - 0',
-  status: 'Stopped'},
+  status: `<span class='i'>I</span>`},
 ];
 
 

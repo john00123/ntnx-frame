@@ -1,0 +1,65 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <title>Email</title>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="width: 100% !important;margin: 0;padding: 0;-webkit-text-size-adjust: none;background-color: #FAFAFA">
+   <center>
+      <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable" style="height: 100% !important;margin: 0;padding: 0;width: 100% !important">
+         <tr>
+            <td align="center" valign="top">
+               <table border="0" cellpadding="0" cellspacing="0" width="600" id="headerContent" style="background-color: #2a2a2a;border-bottom: 1px solid #F5F5F5;color: #202020;font-family: Gotham A,Gotham B,Arial,Sans Serif;font-size: 2.125em;font-weight: bold;line-height: 100%;padding: 0;text-align: center;vertical-align: middle">
+                  <tr>
+                     <td>
+                        <img src='http://new-test-drive.herokuapp.com/images/emailheader.png' style="margin: 20px 0;border: none;font-size: 1em;font-weight: bold;height: auto;line-height: 100%;outline: none;text-decoration: none;text-transform: capitalize"/>
+                     </td>
+                  </tr>
+               </table>
+               <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer" style="background-color: #FFF">
+                  <tr>
+                     <td align="center" valign="top">
+                        <table border="0" cellpadding="60" cellspacing="0" width="600" id="bodyContent" style="background-color: #FFF;color: #505050;font-family: Gotham A,Gotham B,Arial,Sans Serif;font-size: 1em;line-height: 150%;text-align: left;border-radius: 0.5rem">
+                           <tr>
+                              <td valign="top" style="font-family: Gotham A,Gotham B,Arial,Sans Serif;">
+                                  <p>
+                                    Dear John,
+                                  </p>
+
+                                  <p>Thanks for signing up for your Frame Test Drive!</p>
+
+                                  <p>When you've set aside two hours for testing, click the button below to kick-off your Test Drive.  We'll then create and power up the virtual machines in your account and send you an email when everything's ready (this usually take ~15 minutes). Note that this link will stay active for 24 hours.</p>
+
+                                  <div style="margin: 30px 0; text-align: center;">
+                                    <div style="color: #fff; font-family: Gotham A,Gotham B,Arial,Sans Serif; font-size:16px; font-weight:600; text-transform:uppercase; padding: 15px 45px; display: inline-block; text-align: center;background: #528fcc; border-radius: 2px;" valign="middle">
+                                      <a href='<%= @validation_url%>' style="color:#FFFFFF; text-decoration:none;font-weight:300;" target="_blank">
+                                        Create my Test Drive Account
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <p>In the meantime, review our <a href="https://fra.me/testdrive.pdf">Test Drive guide</a> where you'll see how to quickly onboard your own Windows apps, publish to production, invite other users, track analytics, and much more.
+                                  </p>
+
+                                  <p>Welcome!</p>
+
+                                  <p>Nikola Bozinovic<br>
+                                  VP/GM of Desktop Services at Nutanix</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </table>
+               <table border="0" cellpadding="20" cellspacing="0" width="600" id="templateFooter" style="color: #ffffff;font-family: Gotham A,Gotham B,Arial,Sans Serif;font-size: 1em;line-height: 125%;text-align: center;background-color: #2a2a2a;">
+                  <tr>
+                     <td valign="top">
+                        © Nutanix 2018 | Handcrafted in Sunny California
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+   </center>
+</body>
+</html>

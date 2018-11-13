@@ -29,6 +29,7 @@ function listItem(data){
 
 sideBar(systemSide)
 
+
 function sideBar(source){
   $('aside').html(source.map(steps => listItem(steps)).join(''));
 

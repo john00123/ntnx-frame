@@ -1,22 +1,46 @@
 
 const popupData ={
   title :[
-    'Almost Done'
+    'Create account'
   ],
 
   body: [
     //0 add instance
     `
-        <img src='../img/license.svg' style='height:100px'/><br>
-        <p> Download the license file below and upload it on to Prism Element of the cluster to complete this process. </p>
+      <label>Organization</label>
+      <select><option selected>Test Accounts</option></select>
+
+      <label>Name</label>
+      <input type='text' placeholder='Name'></input>
+
+      <label>URL Slug</label>
+      <input type='text' placeholder='URL Slug'></input>
+
+      <label>Data Center</label>
+      <select><option>Test Accounts</option></select>
+
+      <label>Instance Family</label>
+      <select><option selected>Test Accounts</option></select>
+
+      <label>Sandbox Instance Type</label>
+      <select><option selected>Test Accounts</option></select>
+
+      <label>Disk Size</label>
+      <select><option selected>Test Accounts</option></select>
+
+      <label>Image Famliy</label>
+      <select><option selected>Test Accounts</option></select>
+
+      <h3>sdsd<input type='checkbox'></input></h3>
+      <div class='inputs fw'><input type='checkbox'></input><p> Use own RDS CALs</p></div>
 
     `
   ],
 
   footer:[
     //0
-    `<button class="secondary save" onclick="removePopup()"" style='width:auto'>Close</button>
-    <button class="primary save" onclick="removePopup()" style='width:auto; margin-left:10px'>Download Again</button>
+    `<button class="secondary save" onclick="removePopup()"" style='width:auto'>Cancel</button>
+    <button class="primary save" onclick="removePopup()" style='width:auto; margin-left:10px'>Create</button>
     `,
   ]
 }

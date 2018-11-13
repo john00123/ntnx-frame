@@ -4,18 +4,18 @@
 
 html   { @include font }
 body {
+  @include inputStyle
   margin       : 60px 0 0 240px;
   background   : $background-color-3;
   width        : calc(100vw - 240px);
   min-height   : calc(100vh - 160px);
-  @include inputStyle
 }
 
 aside{
-  height: calc(100vh - 120px);
+  height       : calc(100vh - 60px);
 }
 
-header, li, .right, .left, .subheader, .card-header {
+header, li, .right, .left, .subheader, .card-header{
   @include flex(center, space-between, row);
 }
 
@@ -46,12 +46,42 @@ h1 { line-height: 1.2 }
 .secondary-alt { @include secondary-alt }
 .secondary     { @include secondary }
 
+//select
+select{
+  width: 140px;
+  @include secondary;
+  display: flex;
+  align-items:center;
+
+  width: 100%;
+  padding-bottom:  20px;
+  line-height: 122pt;
+
+  -webkit-appearance:none;
+  text-align: left;
+  position: relative;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 16 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M5.35618788,2.22742546 C5.7117555,2.65410659 5.55628335,3 5.00019251,3 L1.99980749,3 C1.44762906,3 1.28678179,2.65586185 1.64381212,2.22742546 L3.18337327,0.379952073 C3.35824139,0.170110337 3.64889956,0.178679466 3.81662673,0.379952073 L5.35618788,2.22742546 Z M1.64381212,5.77257454 C1.2882445,5.34589341 1.44371665,5 1.99980749,5 L5.00019251,5 C5.55237094,5 5.71321821,5.34413815 5.35618788,5.77257454 L3.81662673,7.62004793 C3.64175861,7.82988966 3.35110044,7.82132053 3.18337327,7.62004793 L1.64381212,5.77257454 Z" fill="#637286"></path></svg>') no-repeat right center #fff;
+  background-size: 16px 8px
+}
 
 // color and size
 
 [data-type='alt']  { color:$font-color-3 }
 .fw                { width: 100% }
-
+.a{
+  background: $green-1;
+  color:white;
+  @include flex(center, center, row);
+  @include size(20px, 20px);
+  border-radius: 4px;
+}
+.i{
+  background: $red-1;
+  color:white;
+  @include flex(center, center, row);
+  @include size(20px, 20px);
+  border-radius: 4px;
+}
 
 //header
 
@@ -409,6 +439,96 @@ input[type='checkbox']:checked{
   &:after{
     left: 8px;
     border-color: $dark-blue-2;
+  }
+
+}
+
+//popup
+
+.overlay{
+  @include size(100%, 100vw);
+  @include flex(center, center, column);
+  @include absolute();
+  background-color: rgba(0,0,0,0.4);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.popup{
+  @include size(auto,400px);
+  @include shadow;
+}
+
+.popup-header{
+  @include flex(center, center ,row);
+  @include size(auto, 100%);
+  position:relative;
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid $border-color-3;
+  line-height: 10px;
+
+  &:hover::before, &:hover::after{
+    background-color:$font-color-1;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &::before, &::after{
+  content:'';
+  @include absolute(18px,'',23px);
+  @include size(14px, 2px);
+  border-radius: 3px;
+  display: block;
+  background-color: $font-color-3;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+  }
+  &::after{
+    transform: rotate(-45deg);
+  }
+}
+
+.popup-body{
+  @include size(auto,100%);
+  @include flex(center, flex-start, column);
+  @include inputStyle;
+  padding: 30px 20px;
+  background-color: white;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.popup-footer{
+  @include flex(center,flex-end,row);
+  @include size(72px, 100%);
+  border-radius:
+  0   0
+  4px 4px;
+  border-top: 1px solid $border-color-3;
+  background-color: white;
+  padding: 20px;
+
+  .primary{
+    @include primary;
+    border: 1px solid transparent;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .secondary{
+    @include secondary;
+    height: 32px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    flex-shrink: 0;
   }
 
 }
