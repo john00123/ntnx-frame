@@ -6,7 +6,7 @@ const nutanixLogo = `
   </svg>`
 
 
-const frameHeader = `<div class='right'>${nutanixLogo} Account Admin </div>
+const frameHeader = `<div class='right'>${nutanixLogo} Frame California </div>
   <div class='left'>🥶</div>
 `
 
