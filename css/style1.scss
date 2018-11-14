@@ -162,7 +162,6 @@ container{
   padding      : 20px ;
   height       : 100% ;
   min-height   : calc(100vh - 160px);
-  max-width    : 1500px;
   background   : $background-color-3;
   @include flex(center, flex-start, column);
 }
@@ -218,7 +217,7 @@ container{
   }
 
   @media screen and (max-width: 1200px){
-    @include grid(450px, 1fr, 20px);
+    @include grid(420px, 1fr, 20px);
   }
 }
 
