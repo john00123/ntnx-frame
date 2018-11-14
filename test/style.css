@@ -8754,6 +8754,7 @@ a{
 	border-radius: 4px;
 	text-transform: capitalize;
 	height: 32px;
+	font-weight: 500!important;
 }
 
 #contact-content {
