@@ -31,9 +31,15 @@ const popupData ={
       <label>Image Famliy</label>
       <select><option selected>Test Accounts</option></select>
 
-      <h3>sdsd<input type='checkbox'></input></h3>
-      <div class='inputs fw'><input type='checkbox'></input><p> Use own RDS CALs</p></div>
+      <div class='columns fw'>
+      <div class='middle fw'>
+      <h3>Use own RDS CALs</h3>
+      <input type='checkbox'></input>
+      </div>
 
+      <div class='middle fw'>
+      <h3>Customize VPC settings<input type='checkbox'></input></h3></div>
+      </div>
     `
   ],
 

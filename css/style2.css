@@ -77,6 +77,16 @@ header, li, .right, .left, .subheader, .card-header {
   opacity: 0.6;
 }
 
+.middle h3 {
+  display: inline-block;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.middle input {
+  margin-left: 0 !important;
+}
+
 h1 {
   font: 200 29px/20px "nutanix_soft", san-serif;
 }
@@ -213,7 +223,7 @@ h1 {
 }
 
 select {
-  width: 140px;
+  -webkit-appearance: unset;
   border: 1px solid #D5DAE0;
   border-radius: 4px;
   padding: 11px 15px;
@@ -223,14 +233,11 @@ select {
   background-color: #FFFFFF;
   margin: 0;
   outline: none;
-  display: flex;
-  align-items: center;
+  border-color: #B8BFCA;
   width: 100%;
-  padding-bottom: 20px;
-  line-height: 122pt;
-  -webkit-appearance: none;
-  text-align: left;
-  position: relative;
+  padding: 15px 15px;
+  line-height: 10pt;
+  margin-bottom: 20px;
   background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 16 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M5.35618788,2.22742546 C5.7117555,2.65410659 5.55628335,3 5.00019251,3 L1.99980749,3 C1.44762906,3 1.28678179,2.65586185 1.64381212,2.22742546 L3.18337327,0.379952073 C3.35824139,0.170110337 3.64889956,0.178679466 3.81662673,0.379952073 L5.35618788,2.22742546 Z M1.64381212,5.77257454 C1.2882445,5.34589341 1.44371665,5 1.99980749,5 L5.00019251,5 C5.55237094,5 5.71321821,5.34413815 5.35618788,5.77257454 L3.81662673,7.62004793 C3.64175861,7.82988966 3.35110044,7.82132053 3.18337327,7.62004793 L1.64381212,5.77257454 Z" fill="#637286"></path></svg>') no-repeat right center #fff;
   background-size: 16px 8px;
 }
@@ -376,7 +383,21 @@ container {
 }
 
 .btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   margin-bottom: 0px;
+}
+
+input.search {
+  margin-top: 0 !important;
+  border-color: transparent !important;
+  width: 200px !important;
+}
+
+input.search:focus {
+  border-color: #22A5F7 !important;
 }
 
 .banner {
