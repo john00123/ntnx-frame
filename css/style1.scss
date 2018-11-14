@@ -211,8 +211,15 @@ container{
 //card grid
 
 .grid{
-  @include grid(400px, 1fr, 20px);
+  @include grid(600px, 1fr, 20px);
   width : 100%;
+  @media screen and (max-width: 1400px){
+    @include grid(400px, 1fr, 20px);
+  }
+
+  @media screen and (max-width: 1200px){
+    @include grid(450px, 1fr, 20px);
+  }
 }
 
 
@@ -327,6 +334,10 @@ td {
   flex-direction: column;
   height: 500px;
 
+  @media screen and (max-width: 1080px){
+    grid-row: 3 / span 1;
+    grid-column: 1/ span 1;
+  }
 
   .card-body{
     display: flex;

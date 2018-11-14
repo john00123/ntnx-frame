@@ -390,9 +390,25 @@ container {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   grid-gap: 20px;
   width: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 20px;
+  }
 }
 
 .card {
@@ -505,6 +521,13 @@ td:last-child {
   display: flex;
   flex-direction: column;
   height: 500px;
+}
+
+@media screen and (max-width: 1080px) {
+  .Applications {
+    grid-row: 3 / span 1;
+    grid-column: 1/ span 1;
+  }
 }
 
 .Applications .card-body {
