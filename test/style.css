@@ -147,8 +147,8 @@
 	float:left;
 	width:auto;
 	margin:0.2em 0 0 -0.375em;
-	padding:0 0.25em;
-	font-size:0.875em;
+	padding:0 0.25rem;
+	font-size:0.875rem;
 	letter-spacing:-1px;
 	letter-spacing:-0.063em;
 	color:#f5f8fb;
@@ -387,8 +387,8 @@
 .frontapps .frontapp {
 	float:left;
 	width:33.3333333333%;
-	margin:4.5em auto;
-	padding:0 0.875em;
+	margin:2.5rem auto;
+	padding:0 0.375em;
 	-moz-box-sizing:border-box;
 	     box-sizing:border-box;
 	font-weight:300;
@@ -8763,13 +8763,30 @@ a{
 
 #contact-content::before {
 	content 		: '';
-	top 				: 0;
+	top 				: 0px;
+	left        : 0px;
 	width 			: 100%;
 	display 		: block;
-	height 			: 260px;
+	height 			: 270px;
 	position 		: absolute;
 	background 	: #388ff6;
+	z-index: -1;
 }
+
+/* #contact-content::before {
+	content 		: '';
+	top 				: -180px;
+	left        : -30px;
+	width 			: 130%;
+	display 		: block;
+	height 			: 380px;
+	position 		: absolute;
+	background 	: #388ff6;
+	transform: rotate(-6deg);
+	z-index: -1;
+} */
+
+
 
 .white{
 	color:white!important;
@@ -8844,6 +8861,10 @@ footer h5{
 
 li{
 	line-height: 2;
+}
+
+body, html{
+	background: transparent!important;
 }
 
 /* END OF CHANGES ****************************************************************/
