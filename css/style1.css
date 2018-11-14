@@ -8,9 +8,9 @@ html {
 }
 
 body {
-  margin: 120px 0 0 240px;
+  margin: 60px 0 0 200px;
   background: #F2F4F6;
-  width: calc(100vw - 240px);
+  width: calc(100vw - 200px);
   min-height: calc(100vh - 160px);
 }
 
@@ -51,7 +51,7 @@ body label {
 }
 
 aside {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 60px);
 }
 
 header, li, .right, .left, .subheader, .card-header {
@@ -287,13 +287,14 @@ header .logo {
 }
 
 aside {
-  top: 120px;
+  top: 60px;
   left: 0;
   color: #627386;
-  width: 240px;
+  width: 200px;
   padding: 20px 0;
   box-sizing: border-box;
   border-right: 1px solid #F2F4F6;
+  background: #37414B;
 }
 
 li {
@@ -302,9 +303,7 @@ li {
 }
 
 .side-active {
-  color: #22272E;
-  background: #f4fbff;
-  border-right: 2px solid #22A5F7;
+  color: #FFFFFF;
 }
 
 .side-active-alt {
@@ -400,6 +399,7 @@ container {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   background: white;
   will-change: box-shadow;
+  max-height: 460px;
 }
 
 .card:hover {
@@ -447,6 +447,20 @@ td:last-child {
   border-bottom: 1px solid #F2F4F6;
 }
 
+.Sandbox .card-body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.Sandbox .monitor {
+  height: 200px;
+  flex-grow: 1;
+  background-image: url("https://frame.nutanix.com/static/media/stopped.4bd3a2f0.svg");
+  background-size: cover;
+  border-bottom-left-radius: 4px;
+}
+
 .state {
   height: 6px;
   width: 6px;
@@ -455,6 +469,10 @@ td:last-child {
   margin-right: 10px;
   display: inline-flex;
   transform: translateY(-1px);
+}
+
+#Sandbox-table {
+  width: 60%;
 }
 
 #Backup-table td:last-child {
@@ -482,16 +500,37 @@ td:last-child {
 .Applications {
   grid-row: 1 / span 2;
   grid-column: 2/ span 2;
+  min-height: 540px;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
 }
 
 .Applications .card-body {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 70px);
+}
+
+.Applications .spacer {
+  display: flex;
+  flex-grow: 1;
+}
+
+.Applications .card-footer {
+  height: 40px;
+}
+
+.Applications .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   grid-gap: 0;
   overflow: hidden;
+  height: 100%;
 }
 
-.Applications .card-body .iconContainer {
+.Applications .card-grid .iconContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -502,12 +541,12 @@ td:last-child {
   transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.Applications .card-body .iconContainer img {
+.Applications .card-grid .iconContainer img {
   height: 52px;
   margin-bottom: 10px;
 }
 
-.Applications .card-body .iconContainer:after {
+.Applications .card-grid .iconContainer:after {
   top: 10px;
   right: 10px;
   color: #7C8D9F;
@@ -516,13 +555,13 @@ td:last-child {
   position: absolute;
 }
 
-.Applications .card-body .iconContainer:hover {
+.Applications .card-grid .iconContainer:hover {
   cursor: pointer;
   color: #22A5F7;
   z-index: 10;
 }
 
-.Applications .card-body .iconContainer:hover:after {
+.Applications .card-grid .iconContainer:hover:after {
   color: #22A5F7;
   opacity: 1;
 }

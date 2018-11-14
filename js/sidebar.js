@@ -14,6 +14,19 @@ const statusSide = [
   },
 ]
 
+const mainSide=[
+  { number: 1,
+    step: 'Systems'},
+  { number: 2,
+    step: 'Launchpad'},
+  { number: 3,
+    step: 'Users'},
+  { number: 4,
+    step: 'Settings'},
+  { number: 5,
+    step: 'Status'},
+]
+
 const launcherSide = [
   { number: 1,
     step: 'Office Apps',
@@ -67,7 +80,7 @@ function listItem(data){
 
 //initial setup
 
-sideBar(systemSide)
+sideBar(mainSide)
 
 function sideBar(source){
   $('aside').html(source.map(steps => listItem(steps)).join(''));

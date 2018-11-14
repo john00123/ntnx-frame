@@ -4,15 +4,15 @@
 
 html   { @include font }
 body {
-  margin       : 120px 0 0 240px;
+  margin       : 60px 0 0 200px;
   background   : $background-color-3;
-  width        : calc(100vw - 240px);
+  width        : calc(100vw - 200px);
   min-height   : calc(100vh - 160px);
   @include inputStyle
 }
 
 aside{
-  height: calc(100vh - 120px);
+  height: calc(100vh - 60px);
 }
 
 header, li, .right, .left, .subheader, .card-header {
@@ -115,13 +115,14 @@ header {
 //sidebar
 
 aside{
-  top          : 120px  ;
+  top          : 60px  ;
   left         : 0      ;
   color        : $font-color-2;
-  width        : 240px  ;
+  width        : 200px  ;
   padding      : 20px 0 ;
   box-sizing   : border-box;
   border-right : 1px solid $border-color-3;
+  background:  $background-color-2;
 }
 
 li{
@@ -130,9 +131,9 @@ li{
 }
 
 .side-active{
-  color        : $font-color-1    ;
-  background   : $semi-white-blue ;
-  border-right : 2px solid $blue-1;
+  color        : $white   ;
+  // background   : $semi-white-blue ;
+  // border-right : 2px solid $blue-1;
 }
 
 .side-active-alt{
@@ -222,6 +223,7 @@ container{
   background : white;
   will-change: box-shadow;
   &:hover { @include shadow }
+  max-height: 460px;
 }
 
 .card-header{
@@ -242,9 +244,6 @@ container{
 
 //table
 
-
-
-
 td {
   padding       : 0 20px;
   vertical-align: middle;
@@ -258,7 +257,23 @@ td {
 }
 
 
-//Sandox tile
+//Sandbox tile
+
+.Sandbox{
+  .card-body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .monitor{
+    height: 200px;
+    flex-grow:1;
+    background-image: url("https://frame.nutanix.com/static/media/stopped.4bd3a2f0.svg");
+    background-size: cover;
+    border-bottom-left-radius: 4px;
+  }
+}
+
 
 .state{
   @include size(6px, 6px);
@@ -268,7 +283,9 @@ td {
   transform     : translateY(-1px);
 }
 
-
+#Sandbox-table{
+  width: 60%;
+}
 
 //Backup-table card
 
@@ -296,16 +313,39 @@ td {
   }
 }
 
+
+
+
 //apps card
 
 .Applications{
-
   grid-row: 1 / span 2;
   grid-column: 2/ span 2;
+  min-height: 540px;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+
 
   .card-body{
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 70px);
+  }
+
+  .spacer{
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .card-footer{
+    height: 40px;
+  }
+  .card-grid{
     @include grid(120px, 1fr, 0);
     overflow: hidden;
+    height: 100%;
 
     .iconContainer{
       @include flex(center, center, column);

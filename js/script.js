@@ -114,23 +114,25 @@ const network = [
 
 function cardIcons(){
   $('.Applications .card-body').html('');
+  $('.Applications .card-body').append('<div class="card-grid"></div>');
+  $('.Applications .card-body').append('<div class="spacer"></div>');
 
   for (i=1; i<5; i++){
-    $('.Applications .card-body').append(`
+    $('.card-grid').append(`
       <div class='iconContainer'>
         <img src='../img/icon${i}.png'/>
         <h3>appTitle</h3>
       </div>`)
   }
   for (i=4; i>0; i--){
-    $('.Applications .card-body').append(`
+    $('.card-grid').append(`
       <div class='iconContainer'>
         <img src='../img/icon${i}.png'/>
         <h3>appTitle</h3>
       </div>`)
   }
   for (i=1; i<5; i++){
-    $('.Applications .card-body').append(`
+    $('.card-grid').append(`
       <div class='iconContainer'>
         <img src='../img/icon${i}.png'/>
         <h3>appTitle</h3>
@@ -155,6 +157,9 @@ function card(name, source, action){
     </div>
 
     <div class='card-body'>
+      ${
+        name == 'Sandbox' ? `<div class='monitor'></div>` : ''
+      }
       <table class='fw' id='${name}-table'>
         ${source.map(s => `
         <tr>
@@ -179,13 +184,12 @@ function card(name, source, action){
 
 
 
-card('Sandox', status,'Power On');
-card('Backup', backup,'Create Backup');
-card('Applications', backup,'null');
+card('Sandbox', status,'null');
+card('Backup', backup,'Total number of backups: 8');
+card('Applications', backup,'Total number of onboarded applications: 15');
 cardIcons();
 primary('Publish');
-$('container').prepend(banner);
-
+// $('container').prepend(banner);
 
 $('.sub-item:eq(0)').click( function(){
   sideBar(systemSide)
