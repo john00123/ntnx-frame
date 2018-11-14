@@ -262,7 +262,7 @@ header .logo {
 }
 
 .sub-item:hover, li:hover {
-  color: #22A5F7;
+  color: #FFFFFF;
   cursor: pointer;
 }
 
@@ -289,7 +289,7 @@ header .logo {
 aside {
   top: 60px;
   left: 0;
-  color: #627386;
+  color: #9AA5B5;
   width: 200px;
   padding: 20px 0;
   box-sizing: border-box;
@@ -304,6 +304,7 @@ li {
 
 .side-active {
   color: #FFFFFF;
+  background: #4D5969;
 }
 
 .side-active-alt {
@@ -426,18 +427,34 @@ container {
   width: 100%;
   box-sizing: border-box;
   padding: 0 20px;
+  font-weight: 500;
   border-bottom: 1px solid #F2F4F6;
+}
+
+.header-action {
+  transform: translateX(10px);
+}
+
+.header-action:hover {
+  text-decoration: none;
+}
+
+.header-action:after {
+  color: #7C8D9F;
+  content: '⠇';
+  margin-left: 15px;
 }
 
 .card-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row;
   height: 40px;
   width: 100%;
   box-sizing: border-box;
-  color: #22A5F7;
+  padding: 0 20px;
+  color: #9AA5B5;
   border-top: 1px solid #F2F4F6;
   font-weight: 500;
 }

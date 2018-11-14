@@ -90,7 +90,7 @@ header {
 }
 
 .sub-item:hover, li:hover{
-  color         : $blue-1;
+  color         : $white;
   cursor        : pointer;
 }
 
@@ -117,7 +117,7 @@ header {
 aside{
   top          : 60px  ;
   left         : 0      ;
-  color        : $font-color-2;
+  color        : $grey-3;
   width        : 200px  ;
   padding      : 20px 0 ;
   box-sizing   : border-box;
@@ -132,8 +132,8 @@ li{
 
 .side-active{
   color        : $white   ;
-  // background   : $semi-white-blue ;
-  // border-right : 2px solid $blue-1;
+  background   : $dark-grey-3;
+  // border-right : 2px solid $red-1;
 }
 
 .side-active-alt{
@@ -235,13 +235,27 @@ container{
 .card-header{
   @include size(40px, 100%);
   padding       : 0 20px;
+  font-weight: 500;
   border-bottom : 1px solid $border-color-3;
 }
 
+.header-action{
+  transform: translateX(10px);
+  &:hover{
+    text-decoration: none;
+  }
+}
+.header-action:after{
+  color           : $font-color-3;
+  content         : '⠇' ;
+  margin-left     : 15px;
+}
+
 .card-footer{
-  @include flex(center,center, row);
+  @include flex(center,flex-start, row);
   @include size(40px, 100%);
-  color         : $blue-1;
+  padding: 0 20px;
+  color         : $font-color-4;
   border-top    : 1px solid $border-color-3;
   font-weight   : 500;
   &:hover { cursor: pointer}

@@ -148,12 +148,14 @@ function secondary(data){
 $('.page-actions').append(`<button class="secondary-alt">${data}</button>`)
 }
 
-function card(name, source, action){
+function card(name, source, action, action2){
   $('.grid').append( `
   <div class='card ${name}'>
 
     <div class='card-header'>
       <h3> ${name}</h3>
+      ${ action2 != 'null'?
+    `<a class='header-action'> ${action2}</a> ` : ''}
     </div>
 
     <div class='card-body'>
@@ -184,9 +186,9 @@ function card(name, source, action){
 
 
 
-card('Sandbox', status,'null');
-card('Backup', backup,'Total number of backups: 8');
-card('Applications', backup,'Total number of onboarded applications: 15');
+card('Sandbox', status,'null','Power On');
+card('Backup', backup,'Total number of backups: 8','Create Backup');
+card('Applications', backup,'Total number of onboarded applications: 15','null');
 cardIcons();
 primary('Publish');
 // $('container').prepend(banner);
