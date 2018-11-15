@@ -50,10 +50,6 @@ body label {
   margin-bottom: 10px;
 }
 
-aside {
-  height: calc(100vh - 60px);
-}
-
 header, li, .right, .left, .subheader, .card-header {
   display: flex;
   align-items: center;
@@ -234,6 +230,37 @@ header, .subheader {
   margin-left: 20px;
 }
 
+.right {
+  color: #627386;
+}
+
+.right span {
+  color: white;
+}
+
+.left span {
+  background: #1B2025;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.left button {
+  background: none;
+  border: 1px solid #37414B;
+  font: 500 14px/10px "nutanix_soft", san-serif;
+  color: #FFFFFF;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: border-color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.left button:hover {
+  border-color: #4D5969;
+  background: #1B2025;
+  cursor: pointer;
+}
+
 header, aside, footer, .subheader {
   left: 0;
   z-index: 2;
@@ -255,14 +282,33 @@ header .logo {
 }
 
 .subheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   top: 60px;
+  left: 200px;
+  width: calc(100% - 200px);
   z-index: 2;
+  padding: 0 20px;
   color: #627386;
   border-bottom: 1px solid #F2F4F6;
 }
 
+.sub-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.sub-item {
+  padding: 0;
+  margin-right: 30px;
+}
+
 .sub-item:hover, li:hover {
-  color: #FFFFFF;
+  color: #22272E;
   cursor: pointer;
 }
 
@@ -274,7 +320,7 @@ header .logo {
 .sub-active:after {
   content: '';
   left: 0;
-  bottom: -25px;
+  bottom: -12px;
   position: absolute;
   background: #22A5F7;
   height: 2px;
@@ -291,10 +337,16 @@ aside {
   left: 0;
   color: #9AA5B5;
   width: 200px;
+  height: calc(100vh - 60px);
   padding: 20px 0;
   box-sizing: border-box;
   border-right: 1px solid #F2F4F6;
-  background: #37414B;
+  background: #1B2025;
+}
+
+aside h2 {
+  padding: 10px 20px 20px 20px;
+  color: #4D5969;
 }
 
 li {
@@ -302,14 +354,27 @@ li {
   padding: 0 20px;
 }
 
+li:hover {
+  color: white;
+}
+
 .side-active {
   color: #FFFFFF;
-  background: #4D5969;
+  background: #22272E;
 }
 
 .side-active-alt {
   border: none;
   background: transparent;
+}
+
+.mini {
+  margin: 0 20px;
+  height: 1px;
+  width: 20px;
+  border: none;
+  padding-bottom: 15px;
+  border-top: 1px solid #37414B;
 }
 
 .child {
@@ -328,6 +393,7 @@ li {
 
 container {
   padding: 20px;
+  margin-top: 120px;
   height: 100%;
   min-height: calc(100vh - 160px);
   background: #F2F4F6;

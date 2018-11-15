@@ -141,7 +141,7 @@ function cardIcons(){
 };
 
 function primary(data){
-$('container').prepend(`<div class="page-actions fw"><button class="primary">${data}</button></div>`)
+$('.subheader').append(`<button class="primary">${data}</button>`)
 }
 
 function secondary(data){
@@ -194,19 +194,17 @@ primary('Publish');
 // $('container').prepend(banner);
 
 $('.sub-item:eq(0)').click( function(){
-  sideBar(systemSide)
   $('container').html('');
   $('container').append('<div class="grid"></div>');
-  card('Sandox',status,'Power On');
-  card('Backup', backup,'Create Backup');
-  card('Applications', backup,'null');
+  card('Sandbox', status,'null','Power On');
+  card('Backup', backup,'Total number of backups: 8','Create Backup');
+  card('Applications', backup,'Total number of onboarded applications: 15','null');
   cardIcons();
-  $('container').prepend(banner);
-  primary('Publish');
+  // $('container').prepend(banner);
+  // primary('Publish');
 })
 
 $('.sub-item:eq(1)').click( function(){
-  sideBar(statusSide)
   $('container').html('');
   tableCreator('Viewing 7 Servers', serverHeader, serverData);
   $('container h3').append('&nbsp; <a> Reload </a>');

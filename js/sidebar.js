@@ -81,6 +81,7 @@ function listItem(data){
 //initial setup
 
 sideBar(mainSide)
+$('aside').prepend(`<h2>Frame California</h2><hr class='mini'>`)
 
 function sideBar(source){
   $('aside').html(source.map(steps => listItem(steps)).join(''));

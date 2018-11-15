@@ -11,9 +11,6 @@ body {
   @include inputStyle
 }
 
-aside{
-  height: calc(100vh - 60px);
-}
 
 header, li, .right, .left, .subheader, .card-header {
   @include flex(center, space-between, row);
@@ -60,6 +57,38 @@ header, .subheader { @include size(60px, 100%) }
 .left  > *         { margin-left : 20px }
 
 
+.right {
+  color: $font-color-2;
+}
+
+.right span{
+  color: white;
+}
+
+.left span{
+  background: $semi-black;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.left button{
+  background: none;
+  border: 1px solid $background-color-2;
+  font: $h3;
+  color:$white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  @include transition(border-color);
+  &:hover{
+    border-color: $dark-grey-3;
+    background: $semi-black;
+    cursor: pointer;
+  }
+}
+
+
+
 header, aside, footer, .subheader{
   left            : 0    ;
   z-index         : 2    ;
@@ -83,14 +112,27 @@ header {
 
 
 .subheader{
+  @include flex(center, space-between, row);
   top              : 60px;
+  left             : 200px;
+  width            : calc(100% - 200px);
   z-index          : 2   ;
+  padding          : 0 20px;
   color            : $font-color-2;
   border-bottom    : 1px solid $border-color-3;
 }
 
+.sub-menu{
+  @include flex(center, space-between, row);
+}
+
+.sub-item{
+  padding: 0;
+  margin-right: 30px;
+}
+
 .sub-item:hover, li:hover{
-  color         : $white;
+  color         : $font-color-1;
   cursor        : pointer;
 }
 
@@ -102,7 +144,7 @@ header {
   &:after{
     content     : ''         ;
     left        : 0          ;
-    bottom      : -25px      ;
+    bottom      : -12px      ;
     position    : absolute   ;
     background  : $blue-1    ;
     @include size(2px, 100%) ;
@@ -119,10 +161,16 @@ aside{
   left         : 0      ;
   color        : $grey-3;
   width        : 200px  ;
+  height       : calc(100vh - 60px);
   padding      : 20px 0 ;
   box-sizing   : border-box;
   border-right : 1px solid $border-color-3;
-  background:  $background-color-2;
+  background:  $semi-black;
+}
+
+aside h2{
+  padding: 10px 20px 20px 20px;
+  color: $dark-grey-3;
 }
 
 li{
@@ -130,15 +178,28 @@ li{
   padding      : 0 20px ;
 }
 
+li:hover{
+  color        : white;
+}
+
 .side-active{
   color        : $white   ;
-  background   : $dark-grey-3;
+  background   : $background-color-1;
   // border-right : 2px solid $red-1;
 }
 
 .side-active-alt{
   border       : none;
   background   : transparent;
+}
+
+.mini{
+  margin: 0 20px;
+  height: 1px;
+  width: 20px;
+  border: none;
+  padding-bottom: 15px;
+  border-top: 1px solid $background-color-2;
 }
 
 .child{
@@ -160,6 +221,7 @@ li{
 
 container{
   padding      : 20px ;
+  margin-top   : 120px ;
   height       : 100% ;
   min-height   : calc(100vh - 160px);
   background   : $background-color-3;
@@ -268,7 +330,6 @@ td {
   padding       : 0 20px;
   vertical-align: middle;
   @include size(40px, auto)
-
   &:last-child { text-align: right }
 }
 
