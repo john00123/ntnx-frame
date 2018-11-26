@@ -40,6 +40,60 @@ const popupData ={
       <div class='middle fw'>
       <h3>Customize VPC settings<input type='checkbox'></input></h3></div>
       </div>
+    `,
+
+    //1 - Map view
+    `
+      <div flex='r' class='fw' style='padding:20px 0'>
+        <div class='fw' style='margin-right:10px;'>
+          <label>Name</label><br>
+          <input style='margin-top:10px' type='text' placeholder='name'></input>
+        </div>
+        <div class='fw' style='margin-left:10px;'>
+          <label>Name</label>
+          <input style='margin-top:10px' type='text' placeholder='name'></input>
+        </div>
+      </div>
+      <br><br><br>
+      <div class='sector fw'>
+        <h3 class='fw'> Cloud Provider Region </h3>
+        <div class='map-grid fw'>
+          <div class='secondary active company'>${nutanixLogo} <span>|</span> Nutanix Xi</div>
+          <div class='secondary company'>${nutanixLogo} <span>|</span> Amazon AWS</div>
+          <div class='secondary company'>${nutanixLogo} <span>|</span> Google GCP</div>
+          <div class='secondary company'>${nutanixLogo} <span>|</span> Microsoft Azure</div>
+        </div>
+        <div flex='r' class='map-grid fw'>
+          <div class='secondary place'> 🇩🇪  &nbsp; Frankfurt</div>
+          <div class='secondary place'> 🇪🇸  &nbsp; Toledo </div>
+          <div class='secondary place'> 🇺🇸  &nbsp; San Jose</div>
+          <div class='secondary place'> 🇪🇨  &nbsp; Quito </div>
+        </div>
+        <img class='map-graphic' src='../img/map.svg'>
+      </div>
+      <br><br>
+
+      <div class='fw'>
+        <h3 class='fw'> Imange Family </h3><br>
+        <div class='map-grid map-grid-card fw'>
+        </div>
+      </div>
+
+      <br>
+      <h3 class='fw'> Imange Family </h3><br>
+      <div class='map-grid map-grid-card fw'>
+      </div>
+
+      <br>  <br>
+      <h3 class='fw'> Imange Family </h3><br>
+      <div class='map-grid map-grid-card fw'>
+      </div>
+
+      <br>  <br>
+      <div class='middle fw'>
+      <h3>Customize VPC settings<input type='checkbox'></input></h3>
+      </div>
+
     `
   ],
 

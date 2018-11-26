@@ -79,7 +79,7 @@ select{
   @include secondary;
   border-color: $border-color-1;
   width: 100%;
-  padding: 15px 15px;
+  padding: 0px 10px!important;
   line-height: 10pt;
   margin-bottom: 20px;
   background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 16 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M5.35618788,2.22742546 C5.7117555,2.65410659 5.55628335,3 5.00019251,3 L1.99980749,3 C1.44762906,3 1.28678179,2.65586185 1.64381212,2.22742546 L3.18337327,0.379952073 C3.35824139,0.170110337 3.64889956,0.178679466 3.81662673,0.379952073 L5.35618788,2.22742546 Z M1.64381212,5.77257454 C1.2882445,5.34589341 1.44371665,5 1.99980749,5 L5.00019251,5 C5.55237094,5 5.71321821,5.34413815 5.35618788,5.77257454 L3.81662673,7.62004793 C3.64175861,7.82988966 3.35110044,7.82132053 3.18337327,7.62004793 L1.64381212,5.77257454 Z" fill="#637286"></path></svg>') no-repeat right center #fff;
@@ -504,6 +504,38 @@ input[type='checkbox']:checked{
 
 }
 
+[flex ='r']{
+  @include flex(center, space-between,row);
+}
+
+[flex ='c']{
+  @include flex(flex-start, center, column);
+}
+
+.map{
+  background-color: $semi-white;
+  padding: 20px;
+  height: 400px;
+}
+
+.map-grid{
+  @include grid(120px, 1fr, 20px);
+}
+
+.sector{
+  background-color: $semi-white;
+  padding: 20px;
+  > * {
+    margin-bottom: 20px;
+  }
+  min-height: 540px;
+}
+
+.company{
+  opacity: 0.5;
+}
+
+
 //popup
 
 .overlay{
@@ -563,8 +595,24 @@ input[type='checkbox']:checked{
   @include inputStyle;
   padding: 30px 20px;
   background-color: white;
-  max-height: 500px;
+  max-height: 800px;
   overflow-y: scroll;
+}
+
+.secondary svg{
+  height: 8px;
+}
+
+.secondary span{
+  display:inline-block;
+  color: $border-color-2;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.active{
+  border-color: $blue-1!important;
+  opacity: 1;
 }
 
 .popup-footer{
@@ -592,4 +640,12 @@ input[type='checkbox']:checked{
     flex-shrink: 0;
   }
 
+}
+
+
+//map-grid
+.map-graphic{
+  height: 400px;
+  margin: auto;
+  opacity: 0.5;
 }
