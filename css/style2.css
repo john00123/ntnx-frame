@@ -777,14 +777,14 @@ input[type='checkbox']:checked:after {
 
 .map-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 20px;
 }
 
 .sector {
   background-color: #F8F9FA;
   padding: 20px;
-  min-height: 540px;
+  min-height: 500px;
 }
 
 .sector > * {
@@ -877,7 +877,7 @@ input[type='checkbox']:checked:after {
   flex-direction: column;
   padding: 30px 20px;
   background-color: white;
-  max-height: 800px;
+  max-height: 700px;
   overflow-y: scroll;
 }
 
@@ -1032,7 +1032,22 @@ input[type='checkbox']:checked:after {
 }
 
 .map-graphic {
-  height: 400px;
+  height: 250px;
+  width: 100%;
   margin: auto;
+  margin-top: 20px;
   opacity: 0.5;
+}
+
+.region {
+  position: relative;
+}
+
+.region:after {
+  position: absolute;
+  color: #7C8D9F;
+  content: '● ○ ○';
+  bottom: -30px;
+  left: calc(50% - 23px);
+  font-size: 20px;
 }

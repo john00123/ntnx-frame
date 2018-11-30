@@ -23,17 +23,17 @@ function CreateMapPopup(i,j,k){
   </div>
   `);
 
-  $('.map-grid-card').append(`
-    <div class="primary"></div>
-    <div class="primary"></div>
-    <div class="primary"></div>
-    <div class="primary"></div>
-    <div class="primary"></div>
-    <div class="primary"></div>
-    <div class="primary"></div>
-    <div class="primary"></div>
-    `
-  )
+  // $('.map-grid-card').append(`
+  //   <div class="primary"></div>
+  //   <div class="primary"></div>
+  //   <div class="primary"></div>
+  //   <div class="primary"></div>
+  //   <div class="primary"></div>
+  //   <div class="primary"></div>
+  //   <div class="primary"></div>
+  //   <div class="primary"></div>
+  //   `
+  // )
 }
 
 $('.secondary').click(function(){

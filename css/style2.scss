@@ -519,7 +519,7 @@ input[type='checkbox']:checked{
 }
 
 .map-grid{
-  @include grid(120px, 1fr, 20px);
+  @include grid(150px, 1fr, 20px);
 }
 
 .sector{
@@ -528,7 +528,7 @@ input[type='checkbox']:checked{
   > * {
     margin-bottom: 20px;
   }
-  min-height: 540px;
+  min-height: 500px;
 }
 
 .company{
@@ -595,7 +595,7 @@ input[type='checkbox']:checked{
   @include inputStyle;
   padding: 30px 20px;
   background-color: white;
-  max-height: 800px;
+  max-height: 700px;
   overflow-y: scroll;
 }
 
@@ -645,7 +645,20 @@ input[type='checkbox']:checked{
 
 //map-grid
 .map-graphic{
-  height: 400px;
+
+  height: 250px;
+  width: 100%;
   margin: auto;
+  margin-top: 20px;
   opacity: 0.5;
+}
+
+.region{position: relative;}
+.region:after{
+  position: absolute;
+  color: $font-color-3;
+  content: '● ○ ○';
+  bottom: -30px;
+  left: calc(50% - 23px);
+  font-size: 20px;
 }

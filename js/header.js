@@ -22,6 +22,7 @@ const nutanixLogo = `
 
 
 
+
 const fullpage = `
   <div class='header'>
     <div class='left'>
