@@ -645,20 +645,21 @@ input[type='checkbox']:checked{
 
 //map-grid
 .map-graphic{
-
   height: 250px;
   width: 100%;
   margin: auto;
   margin-top: 20px;
   opacity: 0.5;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .region{position: relative;}
-.region:after{
-  position: absolute;
-  color: $font-color-3;
-  content: '● ○ ○';
-  bottom: -30px;
-  left: calc(50% - 23px);
-  font-size: 20px;
-}
+// .region:after{
+//   position: absolute;
+//   color: $font-color-3;
+//   content: '● ○ ○';
+//   bottom: -3 0px;
+//   left: calc(50% - 23px);
+//   font-size: 20px;
+// }

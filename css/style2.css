@@ -1037,17 +1037,10 @@ input[type='checkbox']:checked:after {
   margin: auto;
   margin-top: 20px;
   opacity: 0.5;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .region {
   position: relative;
-}
-
-.region:after {
-  position: absolute;
-  color: #7C8D9F;
-  content: '● ○ ○';
-  bottom: -30px;
-  left: calc(50% - 23px);
-  font-size: 20px;
 }

@@ -113,6 +113,8 @@ const popupData ={
           <div class='secondary company'>${azureLogo} <span>|</span> Microsoft Azure</div>
         </div><br>
         <h3 class='fw'>Region </h3>
+
+        <img class='map-graphic' src='../img/map.svg'>
         <div flex='r' class='map-grid fw region'>
           <div class='secondary place'> 🇩🇪  &nbsp; Frankfurt</div>
           <div class='secondary place'> 🇪🇸  &nbsp; Toledo </div>
@@ -121,7 +123,6 @@ const popupData ={
           <div class='secondary place'> 🇺🇸  &nbsp; San Jose</div>
           <div class='secondary place'> 🇪🇨  &nbsp; Quito </div>
         </div>
-        <img class='map-graphic' src='../img/map.svg'>
       </div>
       <br><br>
 

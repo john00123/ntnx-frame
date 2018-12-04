@@ -5,10 +5,10 @@ $('aside').prepend(`<h2>Administration</h2><hr class='mini'>`);
 $('.btn-container').append(`<input class='search' type='text' style='margin-top:10px;'' placeholder='Search accounts'></input>`);
 
 $('button').click(function(){
-  CreatePopup(0,0,0);
+  // CreatePopup(0,0,0); // Old create account
+  CreateMapPopup(0,1,0);
 })
 
-CreateMapPopup(0,1,0);
 
 
 function CreateMapPopup(i,j,k){
